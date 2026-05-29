@@ -1,0 +1,388 @@
+[
+  {
+    "text": "小明把书给了小红，因为她需要它。",
+    "coreference": [
+      {"pronoun": "她", "antecedent": "小红"},
+      {"pronoun": "它", "antecedent": "书"}
+    ],
+    "rewrite": "小明把书给了小红，因为小红需要书。"
+  },
+  {
+    "text": "小红买了一部手机，她很喜欢它。",
+    "coreference": [
+      {"pronoun": "她", "antecedent": "小红"},
+      {"pronoun": "它", "antecedent": "手机"}
+    ],
+    "rewrite": "小红买了一部手机，小红很喜欢手机。"
+  },
+  {
+    "text": "华为公司发布了新产品，该公司表示它将在下个月上市。",
+    "coreference": [
+      {"pronoun": "该公司", "antecedent": "华为公司"},
+      {"pronoun": "它", "antecedent": "产品"}
+    ],
+    "rewrite": "华为公司发布了新产品，华为公司表示产品将在下个月上市。"
+  },
+  {
+    "text": "小明完成了作业，他把它交给了老师。",
+    "coreference": [
+      {"pronoun": "他", "antecedent": "小明"},
+      {"pronoun": "它", "antecedent": "作业"}
+    ],
+    "rewrite": "小明完成了作业，小明把作业交给了老师。"
+  },
+  {
+    "text": "小丽加入了研究团队，她认为这个项目很有价值。",
+    "coreference": [
+      {"pronoun": "她", "antecedent": "小丽"},
+      {"pronoun": "这个项目", "antecedent": "项目"}
+    ],
+    "rewrite": "小丽加入了研究团队，小丽认为项目很有价值。"
+  },
+  {
+    "text": "清华大学发布了招生报告，该校表示它已经完成审核。",
+    "coreference": [
+      {"pronoun": "该校", "antecedent": "清华大学"},
+      {"pronoun": "它", "antecedent": "报告"}
+    ],
+    "rewrite": "清华大学发布了招生报告，清华大学表示报告已经完成审核。"
+  },
+  {
+    "text": "小刚借了一台电脑，他明天会归还它。",
+    "coreference": [
+      {"pronoun": "他", "antecedent": "小刚"},
+      {"pronoun": "它", "antecedent": "电脑"}
+    ],
+    "rewrite": "小刚借了一台电脑，小刚明天会归还电脑。"
+  },
+  {
+    "text": "小芳写完了论文，她准备修改它。",
+    "coreference": [
+      {"pronoun": "她", "antecedent": "小芳"},
+      {"pronoun": "它", "antecedent": "论文"}
+    ],
+    "rewrite": "小芳写完了论文，小芳准备修改论文。"
+  },
+  {
+    "text": "腾讯公司上线了新平台，该公司希望它服务更多用户。",
+    "coreference": [
+      {"pronoun": "该公司", "antecedent": "腾讯公司"},
+      {"pronoun": "它", "antecedent": "平台"}
+    ],
+    "rewrite": "腾讯公司上线了新平台，腾讯公司希望平台服务更多用户。"
+  },
+  {
+    "text": "小华整理了报告，他把它发给了导师。",
+    "coreference": [
+      {"pronoun": "他", "antecedent": "小华"},
+      {"pronoun": "它", "antecedent": "报告"}
+    ],
+    "rewrite": "小华整理了报告，小华把报告发给了导师。"
+  },
+  {
+    "text": "李娜买了一本书，她周末会阅读它。",
+    "coreference": [
+      {"pronoun": "她", "antecedent": "李娜"},
+      {"pronoun": "它", "antecedent": "书"}
+    ],
+    "rewrite": "李娜买了一本书，李娜周末会阅读书。"
+  },
+  {
+    "text": "张伟设计了系统，他希望它更加稳定。",
+    "coreference": [
+      {"pronoun": "他", "antecedent": "张伟"},
+      {"pronoun": "它", "antecedent": "系统"}
+    ],
+    "rewrite": "张伟设计了系统，张伟希望系统更加稳定。"
+  },
+  {
+    "text": "小雅找到了钥匙，她把它放进了书包。",
+    "coreference": [
+      {"pronoun": "她", "antecedent": "小雅"},
+      {"pronoun": "它", "antecedent": "钥匙"}
+    ],
+    "rewrite": "小雅找到了钥匙，小雅把钥匙放进了书包。"
+  },
+  {
+    "text": "阿里公司推出了新产品，该产品已经开始测试。",
+    "coreference": [
+      {"pronoun": "该产品", "antecedent": "产品"}
+    ],
+    "rewrite": "阿里公司推出了新产品，产品已经开始测试。"
+  },
+  {
+    "text": "北京大学成立了研究团队，该团队正在开发系统。",
+    "coreference": [
+      {"pronoun": "该团队", "antecedent": "研究团队"}
+    ],
+    "rewrite": "北京大学成立了研究团队，研究团队正在开发系统。"
+  },
+  {
+    "text": "小明和小刚参加了比赛，他们获得了第一名。",
+    "coreference": [
+      {"pronoun": "他们", "antecedent": "小刚"}
+    ],
+    "rewrite": "小明和小刚参加了比赛，小刚获得了第一名。"
+  },
+  {
+    "text": "小红和小丽完成了作业，她们把它交给了老师。",
+    "coreference": [
+      {"pronoun": "她们", "antecedent": "小丽"},
+      {"pronoun": "它", "antecedent": "作业"}
+    ],
+    "rewrite": "小红和小丽完成了作业，小丽把作业交给了老师。"
+  },
+  {
+    "text": "王强修好了电脑，他把它送回了办公室。",
+    "coreference": [
+      {"pronoun": "他", "antecedent": "王强"},
+      {"pronoun": "它", "antecedent": "电脑"}
+    ],
+    "rewrite": "王强修好了电脑，王强把电脑送回了办公室。"
+  },
+  {
+    "text": "王芳收到了礼物，她很珍惜它。",
+    "coreference": [
+      {"pronoun": "她", "antecedent": "王芳"},
+      {"pronoun": "它", "antecedent": "礼物"}
+    ],
+    "rewrite": "王芳收到了礼物，王芳很珍惜礼物。"
+  },
+  {
+    "text": "小李阅读了文章，他认为它很有启发。",
+    "coreference": [
+      {"pronoun": "他", "antecedent": "小李"},
+      {"pronoun": "它", "antecedent": "文章"}
+    ],
+    "rewrite": "小李阅读了文章，小李认为文章很有启发。"
+  },
+  {
+    "text": "学校发布了通知，该校要求学生阅读它。",
+    "coreference": [
+      {"pronoun": "该校", "antecedent": "学校"},
+      {"pronoun": "它", "antecedent": "通知"}
+    ],
+    "rewrite": "学校发布了通知，学校要求学生阅读通知。"
+  },
+  {
+    "text": "医院更新了系统，该系统提升了预约效率。",
+    "coreference": [
+      {"pronoun": "该系统", "antecedent": "系统"}
+    ],
+    "rewrite": "医院更新了系统，系统提升了预约效率。"
+  },
+  {
+    "text": "银行推出了产品，该产品面向年轻用户。",
+    "coreference": [
+      {"pronoun": "该产品", "antecedent": "产品"}
+    ],
+    "rewrite": "银行推出了产品，产品面向年轻用户。"
+  },
+  {
+    "text": "小强打开了电脑，他发现它无法启动。",
+    "coreference": [
+      {"pronoun": "他", "antecedent": "小强"},
+      {"pronoun": "它", "antecedent": "电脑"}
+    ],
+    "rewrite": "小强打开了电脑，小强发现电脑无法启动。"
+  },
+  {
+    "text": "陈明提交了报告，他希望它能通过审核。",
+    "coreference": [
+      {"pronoun": "他", "antecedent": "陈明"},
+      {"pronoun": "它", "antecedent": "报告"}
+    ],
+    "rewrite": "陈明提交了报告，陈明希望报告能通过审核。"
+  },
+  {
+    "text": "刘洋购买了产品，他准备测试它。",
+    "coreference": [
+      {"pronoun": "他", "antecedent": "刘洋"},
+      {"pronoun": "它", "antecedent": "产品"}
+    ],
+    "rewrite": "刘洋购买了产品，刘洋准备测试产品。"
+  },
+  {
+    "text": "杨静完成了项目，她觉得它很有挑战。",
+    "coreference": [
+      {"pronoun": "她", "antecedent": "杨静"},
+      {"pronoun": "它", "antecedent": "项目"}
+    ],
+    "rewrite": "杨静完成了项目，杨静觉得项目很有挑战。"
+  },
+  {
+    "text": "周敏整理了文章，她打算修改它。",
+    "coreference": [
+      {"pronoun": "她", "antecedent": "周敏"},
+      {"pronoun": "它", "antecedent": "文章"}
+    ],
+    "rewrite": "周敏整理了文章，周敏打算修改文章。"
+  },
+  {
+    "text": "吴磊开发了系统，他正在优化它。",
+    "coreference": [
+      {"pronoun": "他", "antecedent": "吴磊"},
+      {"pronoun": "它", "antecedent": "系统"}
+    ],
+    "rewrite": "吴磊开发了系统，吴磊正在优化系统。"
+  },
+  {
+    "text": "赵婷保存了论文，她担心它丢失。",
+    "coreference": [
+      {"pronoun": "她", "antecedent": "赵婷"},
+      {"pronoun": "它", "antecedent": "论文"}
+    ],
+    "rewrite": "赵婷保存了论文，赵婷担心论文丢失。"
+  },
+  {
+    "text": "百度公司发布了报告，该公司称它反映了行业趋势。",
+    "coreference": [
+      {"pronoun": "该公司", "antecedent": "百度公司"},
+      {"pronoun": "它", "antecedent": "报告"}
+    ],
+    "rewrite": "百度公司发布了报告，百度公司称报告反映了行业趋势。"
+  },
+  {
+    "text": "复旦大学建设了平台，该校希望它服务科研人员。",
+    "coreference": [
+      {"pronoun": "该校", "antecedent": "复旦大学"},
+      {"pronoun": "它", "antecedent": "平台"}
+    ],
+    "rewrite": "复旦大学建设了平台，复旦大学希望平台服务科研人员。"
+  },
+  {
+    "text": "研究团队完成了系统，该团队准备展示它。",
+    "coreference": [
+      {"pronoun": "该团队", "antecedent": "研究团队"},
+      {"pronoun": "它", "antecedent": "系统"}
+    ],
+    "rewrite": "研究团队完成了系统，研究团队准备展示系统。"
+  },
+  {
+    "text": "小红把礼物送给小明，因为他今天过生日。",
+    "coreference": [
+      {"pronoun": "他", "antecedent": "小明"}
+    ],
+    "rewrite": "小红把礼物送给小明，因为小明今天过生日。"
+  },
+  {
+    "text": "小明把手机借给小红，因为她忘带了电脑。",
+    "coreference": [
+      {"pronoun": "她", "antecedent": "小红"}
+    ],
+    "rewrite": "小明把手机借给小红，因为小红忘带了电脑。"
+  },
+  {
+    "text": "小刚把报告交给小丽，她认真阅读了它。",
+    "coreference": [
+      {"pronoun": "她", "antecedent": "小丽"},
+      {"pronoun": "它", "antecedent": "报告"}
+    ],
+    "rewrite": "小刚把报告交给小丽，小丽认真阅读了报告。"
+  },
+  {
+    "text": "小芳把钥匙还给小强，他把它放进抽屉。",
+    "coreference": [
+      {"pronoun": "他", "antecedent": "小强"},
+      {"pronoun": "它", "antecedent": "钥匙"}
+    ],
+    "rewrite": "小芳把钥匙还给小强，小强把钥匙放进抽屉。"
+  },
+  {
+    "text": "张伟把论文发给李娜，她建议他修改它。",
+    "coreference": [
+      {"pronoun": "她", "antecedent": "李娜"},
+      {"pronoun": "他", "antecedent": "张伟"},
+      {"pronoun": "它", "antecedent": "论文"}
+    ],
+    "rewrite": "张伟把论文发给李娜，李娜建议张伟修改论文。"
+  },
+  {
+    "text": "王芳把文章推荐给王强，他觉得它值得阅读。",
+    "coreference": [
+      {"pronoun": "他", "antecedent": "王强"},
+      {"pronoun": "它", "antecedent": "文章"}
+    ],
+    "rewrite": "王芳把文章推荐给王强，王强觉得文章值得阅读。"
+  },
+  {
+    "text": "小雅把书放在桌上，她下午会取走它。",
+    "coreference": [
+      {"pronoun": "她", "antecedent": "小雅"},
+      {"pronoun": "它", "antecedent": "书"}
+    ],
+    "rewrite": "小雅把书放在桌上，小雅下午会取走书。"
+  },
+  {
+    "text": "小华把电脑交给小红，她检查了它。",
+    "coreference": [
+      {"pronoun": "她", "antecedent": "小红"},
+      {"pronoun": "它", "antecedent": "电脑"}
+    ],
+    "rewrite": "小华把电脑交给小红，小红检查了电脑。"
+  },
+  {
+    "text": "小李把作业交给小芳，她批改了它。",
+    "coreference": [
+      {"pronoun": "她", "antecedent": "小芳"},
+      {"pronoun": "它", "antecedent": "作业"}
+    ],
+    "rewrite": "小李把作业交给小芳，小芳批改了作业。"
+  },
+  {
+    "text": "公司开发了项目，这个项目已经进入测试阶段。",
+    "coreference": [
+      {"pronoun": "这个项目", "antecedent": "项目"}
+    ],
+    "rewrite": "公司开发了项目，项目已经进入测试阶段。"
+  },
+  {
+    "text": "学校购买了系统，该系统用于课程管理。",
+    "coreference": [
+      {"pronoun": "该系统", "antecedent": "系统"}
+    ],
+    "rewrite": "学校购买了系统，系统用于课程管理。"
+  },
+  {
+    "text": "团队撰写了报告，该报告总结了实验结果。",
+    "coreference": [
+      {"pronoun": "该报告", "antecedent": "报告"}
+    ],
+    "rewrite": "团队撰写了报告，报告总结了实验结果。"
+  },
+  {
+    "text": "平台上线了产品，该产品吸引了很多用户。",
+    "coreference": [
+      {"pronoun": "该产品", "antecedent": "产品"}
+    ],
+    "rewrite": "平台上线了产品，产品吸引了很多用户。"
+  },
+  {
+    "text": "医院采购了电脑，这些电脑将用于门诊。",
+    "coreference": [
+      {"pronoun": "这些电脑", "antecedent": "电脑"}
+    ],
+    "rewrite": "医院采购了电脑，电脑将用于门诊。"
+  },
+  {
+    "text": "银行更新了平台，该平台提高了办理速度。",
+    "coreference": [
+      {"pronoun": "该平台", "antecedent": "平台"}
+    ],
+    "rewrite": "银行更新了平台，平台提高了办理速度。"
+  },
+  {
+    "text": "政府发布了通知，该通知要求企业及时申报。",
+    "coreference": [
+      {"pronoun": "该通知", "antecedent": "通知"}
+    ],
+    "rewrite": "政府发布了通知，通知要求企业及时申报。"
+  },
+  {
+    "text": "老师布置了作业，这些作业需要明天提交。",
+    "coreference": [
+      {"pronoun": "这些作业", "antecedent": "作业"}
+    ],
+    "rewrite": "老师布置了作业，作业需要明天提交。"
+  }
+]

@@ -1,12 +1,23 @@
 import json
 from pathlib import Path
+from typing import Any, Dict, List, Self  # noqa: F401
 
 import streamlit as st
 
-from src.evaluator import ErrorCase, evaluate
-from src.nlp_backend import backend_status
-from src.resolver import CoreferenceResult, ResolverConfig, resolve_text
-from src.rewriter import rewrite_text
+from src import (
+    annote,  # annotator
+    backend_status,  # nlp_backend
+    bind_ref,  # annotator
+    Coreference,  # annotator
+    CoreferenceResult,  # after_resolve
+    ErrorCase,  # after_evaluate
+    evaluate,  # after_evaluate
+    Paragraph,  # annotator
+    RawdataGather,  # data gather(not implemented yet)
+    ResolverConfig,  # after_resolve
+    resolve_text,  # after_resolve
+    rewrite_text,  # after_rewrite
+)
 
 
 BASE_DIR = Path(__file__).parent
@@ -23,6 +34,7 @@ BACKENDS = {
     "HanLP 增强接口": "hanlp",
     "LTP 增强接口": "ltp",
 }
+RG = RawdataGather(DATA_DIR)
 
 
 def load_json(path: Path) -> list[dict]:
@@ -42,7 +54,7 @@ def render_highlighted_text(text: str, results: list[CoreferenceResult]) -> str:
         if start < cursor:
             continue
         html += text[cursor:start]
-        color = "#d8f3dc" if kind == "entity" else "#ffe5b4"
+        color = "#d8f3dc" if kind == "entity" else "#775c2a"
         html += (
             f"<mark style='background:{color};padding:2px 4px;"
             f"border-radius:4px'>{text[start:end]}</mark>"
@@ -50,6 +62,19 @@ def render_highlighted_text(text: str, results: list[CoreferenceResult]) -> str:
         cursor = end
     html += text[cursor:]
     return html
+
+
+def render_highlighted_rawtext(text, s=None, t=None, ref_s=None, ref_t=None):
+    pieces = []
+    for i, ch in enumerate(text):
+        if s is not None and s <= i < t:
+            pieces.append(f"<span style='background:#9b7022'>{ch}</span>")
+        elif ref_s is not None and ref_s <= i < ref_t:
+            pieces.append(f"<span style='background:#20642a'>{ch}</span>")
+        else:
+            pieces.append(ch)
+
+    return "".join(pieces)
 
 
 def relation_rows(results: list[CoreferenceResult]) -> list[dict]:
@@ -68,15 +93,13 @@ def candidate_rows(results: list[CoreferenceResult]) -> list[dict]:
     rows = []
     for result in results:
         for candidate in result.candidates:
-            rows.append(
-                {
-                    "代词": candidate.pronoun.text,
-                    "候选实体": candidate.candidate.text,
-                    "类型": candidate.candidate.label,
-                    "分数": candidate.score,
-                    "规则说明": "；".join(candidate.reasons),
-                }
-            )
+            rows.append({
+                "代词": candidate.pronoun.text,
+                "候选实体": candidate.candidate.text,
+                "类型": candidate.candidate.label,
+                "分数": candidate.score,
+                "规则说明": "；".join(candidate.reasons),
+            })
     return rows
 
 
@@ -107,14 +130,21 @@ else:
     st.sidebar.caption("当前仍使用规则版 baseline，后续安装模型后可接入真实抽取结果。")
 
 demo_samples = load_json(DATASETS["演示集 demo"])
-analysis_tab, evaluation_tab, ablation_tab = st.tabs(["单文本分析", "数据集评估", "消融实验"])
+analysis_tab, evaluation_tab, ablation_tab, annotator_tab = st.tabs([
+    "单文本分析",
+    "数据集评估",
+    "消融实验",
+    "数据标注",
+])
 
 with analysis_tab:
     selected_sample = st.selectbox(
         "示例文本",
         ["自定义输入"] + [sample["text"] for sample in demo_samples],
     )
-    default_text = demo_samples[0]["text"] if selected_sample == "自定义输入" else selected_sample
+    default_text = (
+        demo_samples[0]["text"] if selected_sample == "自定义输入" else selected_sample
+    )
     text = st.text_area("输入中文文本", default_text, height=130)
 
     if st.button("开始分析", type="primary"):
@@ -130,7 +160,9 @@ with analysis_tab:
 
         with right:
             st.subheader("识别结果")
-            st.write(f"候选实体：{', '.join(entity.text for entity in entities) or '无'}")
+            st.write(
+                f"候选实体：{', '.join(entity.text for entity in entities) or '无'}"
+            )
             st.write(f"代词：{', '.join(pronoun.text for pronoun in pronouns) or '无'}")
 
             st.subheader("指代关系")
@@ -195,16 +227,84 @@ with ablation_tab:
     rows = []
     for name, config in experiments:
         result = evaluate(samples, backend=backend, config=config)
-        rows.append(
-            {
-                "实验": name,
-                "正确/真实": f"{result.correct}/{result.total_gold}",
-                "Precision": result.precision,
-                "Recall": result.recall,
-                "F1": result.f1,
-                "ΔF1": round(result.f1 - baseline.f1, 4),
-                "错误样本": len(result.errors),
-            }
-        )
+        rows.append({
+            "实验": name,
+            "正确/真实": f"{result.correct}/{result.total_gold}",
+            "Precision": result.precision,
+            "Recall": result.recall,
+            "F1": result.f1,
+            "ΔF1": round(result.f1 - baseline.f1, 4),
+            "错误样本": len(result.errors),
+        })
     st.dataframe(rows, use_container_width=True, hide_index=True)
-    st.caption("消融实验用于观察每类规则信号对最终效果的贡献，可直接作为报告中的实验补充。")
+    st.caption(
+        "消融实验用于观察每类规则信号对最终效果的贡献，可直接作为报告中的实验补充。"
+    )
+
+
+if "current_idx" not in st.session_state:
+    st.session_state.current_idx = 0
+
+if "annotations" not in st.session_state:
+    st.session_state.annotations = []
+
+if "paras" not in st.session_state:
+    st.session_state.paras = []
+
+
+with annotator_tab:
+    st.subheader("数据标注器")
+    results: List[str] = RG.gather()
+
+    idx = st.session_state.current_idx
+    text = results[idx]
+
+    # 展示文本
+    text_with_index = " ".join(f"{i % 10}:{c}" for i, c in enumerate(text))
+    st.code(text_with_index)
+
+    n = len(text)
+    s, t, ref_s, ref_t = None, None, None, None
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        s = st.number_input("s", min_value=0, max_value=n - 1, value=0, step=1)
+    with col2:
+        t = st.number_input(
+            "t", min_value=s + 1, max_value=n, value=min(s + 1, n), step=1
+        )
+    with col3:
+        ref_s = st.number_input("ref_s", min_value=0, max_value=n - 1, value=0, step=1)
+    with col4:
+        ref_t = st.number_input(
+            "ref_t", min_value=ref_s + 1, max_value=n, value=min(ref_s + 1, n), step=1
+        )
+    text_renderer = st.markdown(
+        render_highlighted_rawtext(text, s, t, ref_s, ref_t), unsafe_allow_html=True
+    )
+
+    st.write("pronoun:", text[s:t])
+    st.write("antecedent:", text[ref_s:ref_t])
+
+    if st.button("添加标注"):
+        c: Coreference = annote(text, s, t, ref_s, ref_t)
+        st.session_state.annotations.append(c)
+
+    st.write("已有标注")
+    for i, c in enumerate(st.session_state.annotations):
+        st.write(f"{i + 1}. {c.pronoun} -> {c.antecedent}")
+
+    if st.button("绑定当前文本"):
+        para: Paragraph = bind_ref(text, st.session_state.annotations)
+        st.session_state.paras.append(para)
+        st.session_state.annotations = []
+        st.success("已绑定")
+
+    if st.button("Next"):
+        st.session_state.annotations = []
+        st.session_state.current_idx += 1
+        if st.session_state.current_idx >= len(results):
+            st.session_state.current_idx = len(results) - 1
+
+    if st.button("Dump"):
+        RG.dump(st.session_state.paras, filename="test_dump.json")
+        st.success(f"Dump {len(st.session_state.paras)} paragraphs.")

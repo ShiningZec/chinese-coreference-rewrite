@@ -1,4 +1,15 @@
+# cache
+.git/
+
+# codex
 .codex_deps/
-__pycache__/
+
+# python
 *.pyc
+__pycache__/
+
+# streamlit
 .streamlit/
+
+# test_dump
+data/test_dump.json

@@ -11,5 +11,11 @@ __pycache__/
 # streamlit
 .streamlit/
 
+# test.py
+test.py
+
+# test_datainput
+# input.txt
+
 # test_dump
 data/test_dump.json

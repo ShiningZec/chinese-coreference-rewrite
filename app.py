@@ -249,18 +249,43 @@ if "annotations" not in st.session_state:
     st.session_state.annotations = []
 
 if "paras" not in st.session_state:
-    st.session_state.paras = []
+    st.session_state.paras = {}
 
+if "results" not in st.session_state:
+    st.session_state.results = RG.gather()
+    
+results = st.session_state.results
 
 with annotator_tab:
     st.subheader("数据标注器")
-    results: List[str] = RG.gather()
+
+    if st.button("Prev"):
+        st.session_state.annotations = []
+        st.session_state.current_idx -= 1
+        if st.session_state.current_idx < 0:
+            st.session_state.current_idx = 0
+        idx = st.session_state.current_idx
+        text = results[idx]
+    if st.button("Next"):
+        st.session_state.annotations = []
+        st.session_state.current_idx += 1
+        if st.session_state.current_idx >= len(results):
+            st.session_state.current_idx = len(results) - 1
+        idx = st.session_state.current_idx
+        text = results[idx]
+    
+    input_file = st.text_input("数据来源", "")
+    if st.button("读取输入"):
+        st.session_state.results = RG.gather(input_file)
+        st.session_state.current_idx = 0
+    results: List[str] = st.session_state.results
 
     idx = st.session_state.current_idx
     text = results[idx]
 
     # 展示文本
-    text_with_index = " ".join(f"{i % 10}:{c}" for i, c in enumerate(text))
+    text = st.text_input("文本修改", text)
+    text_with_index = " ".join(f"{i:02d}:{c}" for i, c in enumerate(text))
     st.code(text_with_index)
 
     n = len(text)
@@ -295,16 +320,17 @@ with annotator_tab:
 
     if st.button("绑定当前文本"):
         para: Paragraph = bind_ref(text, st.session_state.annotations)
-        st.session_state.paras.append(para)
+        st.session_state.paras[idx] = para
         st.session_state.annotations = []
         st.success("已绑定")
 
-    if st.button("Next"):
-        st.session_state.annotations = []
-        st.session_state.current_idx += 1
-        if st.session_state.current_idx >= len(results):
-            st.session_state.current_idx = len(results) - 1
+    dump_to: str = st.text_input("Where to dump to?", "test_dump")
 
     if st.button("Dump"):
-        RG.dump(st.session_state.paras, filename="test_dump.json")
-        st.success(f"Dump {len(st.session_state.paras)} paragraphs.")
+        if not dump_to.endswith(".json"):
+            dump_to = dump_to + ".json"
+        RG.dump(
+            st.session_state.paras.values(),
+            filename=dump_to,
+        )
+        st.success(f"Dump {len(st.session_state.paras)} paragraphs to {dump_to}.")

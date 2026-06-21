@@ -9,6 +9,7 @@ class ResolverConfig:
     use_position: bool = True
     use_type: bool = True
     use_gender: bool = True
+    ambiguity_margin: float = 0.15
 
 
 DEFAULT_CONFIG = ResolverConfig()
@@ -28,6 +29,7 @@ class CoreferenceResult:
     antecedent: Mention
     score: float
     candidates: list[CandidateScore]
+    ambiguous: bool = False
 
 
 def _type_score(pronoun: Mention, candidate: Mention) -> tuple[float, str]:
@@ -82,6 +84,74 @@ def score_candidate(
     return CandidateScore(pronoun, candidate, round(score, 4), reasons)
 
 
+def _interaction_alternatives(
+    text: str,
+    pronoun_index: int,
+    pronouns: list[Mention],
+    entities: list[Mention],
+) -> list[Mention] | None:
+    """Return two plausible people for ambiguous speaker-object patterns."""
+    pronoun = pronouns[pronoun_index]
+    if pronoun.label != "PERSON_PRONOUN":
+        return None
+
+    first_index = None
+    if pronoun_index + 1 < len(pronouns):
+        next_pronoun = pronouns[pronoun_index + 1]
+        if (
+            text[pronoun.end : next_pronoun.start] in {"对", "向", "跟"}
+            and text[next_pronoun.end : next_pronoun.end + 1] in {"说", "讲", "问"}
+        ):
+            first_index = pronoun_index
+    if pronoun_index > 0:
+        previous = pronouns[pronoun_index - 1]
+        if (
+            text[previous.end : pronoun.start] in {"对", "向", "跟"}
+            and text[pronoun.end : pronoun.end + 1] in {"说", "讲", "问"}
+        ):
+            first_index = pronoun_index - 1
+
+    if first_index is None:
+        return None
+
+    people = [entity for entity in entities if entity.label == "PERSON" and entity.end <= pronoun.start]
+    if len(people) < 2:
+        return None
+
+    subject, obj = people[-2], people[-1]
+    between = text[subject.end : obj.start]
+    if not any(marker in between for marker in ("会见", "看见", "遇见", "拜访", "采访", "邀请", "找到")):
+        return None
+
+    if pronoun_index == first_index:
+        return [subject, obj]
+    return [obj, subject]
+
+
+def _benefactive_override(
+    text: str,
+    pronoun: Mention,
+    entities: list[Mention],
+) -> Mention | None:
+    """Resolve A helps/acts-for B patterns using the beneficiary marker."""
+    if pronoun.label != "PERSON_PRONOUN":
+        return None
+
+    people = [entity for entity in entities if entity.label == "PERSON" and entity.end <= pronoun.start]
+    if len(people) < 2:
+        return None
+
+    subject, beneficiary = people[-2], people[-1]
+    between = text[subject.end : beneficiary.start]
+    if not any(marker in between for marker in ("替", "帮", "为")):
+        return None
+
+    previous_char = text[pronoun.start - 1 : pronoun.start]
+    if previous_char in {"替", "帮", "为"}:
+        return beneficiary
+    return subject
+
+
 def resolve_text(
     text: str,
     backend: str = "rule",
@@ -91,7 +161,7 @@ def resolve_text(
     entities, pronouns = extract_mentions(text, backend=backend)
     results: list[CoreferenceResult] = []
 
-    for pronoun in pronouns:
+    for index, pronoun in enumerate(pronouns):
         candidates = [
             entity
             for entity in entities
@@ -103,13 +173,43 @@ def resolve_text(
             key=lambda item: item.score,
             reverse=True,
         )
+        override = _benefactive_override(text, pronoun, entities)
+        if override is not None:
+            override_score = CandidateScore(
+                pronoun=pronoun,
+                candidate=override,
+                score=1.1,
+                reasons=["benefactive pattern", "role marker before beneficiary"],
+            )
+            scored = [override_score] + [item for item in scored if item.candidate != override]
+
+        alternatives = _interaction_alternatives(text, index, pronouns, entities)
+        if alternatives is not None:
+            alternative_scores = [
+                CandidateScore(
+                    pronoun=pronoun,
+                    candidate=alternative,
+                    score=1.0,
+                    reasons=["ambiguous interaction pattern", "manual confirmation needed"],
+                )
+                for alternative in alternatives
+            ]
+            scored = alternative_scores + [
+                item for item in scored if item.candidate not in alternatives
+            ]
+
         if scored and scored[0].score > 0:
+            ambiguous = (
+                len(scored) > 1
+                and scored[0].score - scored[1].score <= config.ambiguity_margin
+            )
             results.append(
                 CoreferenceResult(
                     pronoun=pronoun,
                     antecedent=scored[0].candidate,
                     score=scored[0].score,
                     candidates=scored,
+                    ambiguous=ambiguous,
                 )
             )
 

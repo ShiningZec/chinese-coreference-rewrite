@@ -63,6 +63,52 @@ MALE_HINTS = {
 }
 KNOWN_NAMES = FEMALE_HINTS | MALE_HINTS
 
+COMMON_SURNAMES = (
+    "赵钱孙李周吴郑王冯陈褚卫蒋沈韩杨朱秦尤许何吕施张"
+    "孔曹严华金魏陶姜戚谢邹喻柏水窦章云苏潘葛奚范彭郎"
+    "鲁韦昌马苗凤花方俞任袁柳鲍史唐费廉岑薛雷贺倪汤"
+    "罗毕郝邬安常乐于时傅皮卞齐康伍余元卜顾孟平黄"
+    "和穆萧尹姚邵汪祁毛禹狄米贝明臧计伏成戴谈宋庞"
+    "熊纪舒屈项祝董梁杜阮蓝闵席季麻强贾路娄危江童颜"
+    "郭梅盛林刁钟徐邱骆高夏蔡田胡凌霍虞万支柯昝管卢"
+    "莫经房裘缪干解应宗丁宣邓郁单杭洪包诸左石崔吉"
+    "龚程嵇邢裴陆荣翁荀羊於惠甄曲家封芮羿储靳汲邴"
+    "糜松井段富巫乌焦巴弓牧隗山谷车侯宓蓬全郗班仰"
+    "秋仲伊宫宁仇栾暴甘斜厉戎祖武符刘景詹束龙叶幸"
+    "司韶郜黎蓟薄印宿白怀蒲邰从鄂索咸籍赖卓蔺屠蒙"
+    "池乔阴郁胥能苍双闻莘党翟谭贡劳逄姬申扶堵冉宰"
+    "郦雍却璩桑桂濮牛寿通边扈燕冀郏浦尚农温别庄晏"
+    "柴瞿阎充慕连茹习宦艾鱼容向古易慎戈廖庾终暨居"
+    "衡步都耿满弘匡国文寇广禄阙东欧殳沃利蔚越夔隆"
+    "师巩厍聂晁勾敖融冷訾辛阚那简饶空曾毋沙乜养鞠"
+    "须丰巢关蒯相查后荆红游竺权逯盖益桓公"
+)
+NAME_VERB_SUFFIXES = (
+    "会见",
+    "看见",
+    "遇见",
+    "拜访",
+    "采访",
+    "邀请",
+    "整理",
+    "准备",
+    "找到",
+    "认为",
+    "表示",
+    "说",
+    "告诉",
+    "给",
+    "把",
+    "对",
+    "向",
+    "替",
+    "帮",
+    "为",
+)
+NAME_VERB_PREFIX_CHARS = set("整准确阅读写拿放给把对向替帮为说讲问看见遇找邀采拜访认表")
+LEXICON_ENTITIES: dict[str, dict[str, str]] = {}
+LEXICON_PRONOUNS: dict[str, dict[str, str]] = {}
+
 OBJECT_WORDS = {
     "书",
     "通知",
@@ -113,12 +159,13 @@ def extract_pronouns(text: str) -> list[Mention]:
     """Extract pronouns with longest-match priority."""
     mentions: list[Mention] = []
     occupied: list[tuple[int, int]] = []
-    for pronoun in sorted(PRONOUNS, key=len, reverse=True):
+    pronoun_dict = {**PRONOUNS, **LEXICON_PRONOUNS}
+    for pronoun in sorted(pronoun_dict, key=len, reverse=True):
         for match in re.finditer(re.escape(pronoun), text):
             start, end = match.span()
             if any(not (end <= a or start >= b) for a, b in occupied):
                 continue
-            meta = PRONOUNS[pronoun]
+            meta = pronoun_dict[pronoun]
             mentions.append(
                 Mention(
                     text=pronoun,
@@ -137,6 +184,14 @@ def extract_entities(text: str) -> list[Mention]:
     """Extract lightweight entity candidates for the first prototype."""
     mentions: list[Mention] = []
     occupied: list[tuple[int, int]] = []
+
+    for entity, meta in sorted(LEXICON_ENTITIES.items(), key=lambda item: len(item[0]), reverse=True):
+        for match in re.finditer(re.escape(entity), text):
+            start, end = match.span()
+            if any(not (end <= a or start >= b) for a, b in occupied):
+                continue
+            mentions.append(Mention(entity, start, end, meta["label"], meta["gender"]))
+            occupied.append((start, end))
 
     for match in re.finditer(r"[\u4e00-\u9fff]{1,6}(?:" + "|".join(ORG_SUFFIXES) + r")", text):
         value, start, end = _trim_org_span(text, match.start(), match.end())
@@ -163,6 +218,25 @@ def extract_entities(text: str) -> list[Mention]:
         mentions.append(Mention(name, start, end, "PERSON", gender))
         occupied.append((start, end))
 
+    surname_pattern = "[" + re.escape(COMMON_SURNAMES) + r"][\u4e00-\u9fff]{1,3}"
+    for match in re.finditer(surname_pattern, text):
+        start, end = match.span()
+        name = match.group()
+        for suffix in NAME_VERB_SUFFIXES:
+            if name.endswith(suffix) and len(name) - len(suffix) >= 2:
+                name = name[: -len(suffix)]
+                end = start + len(name)
+                break
+        if len(name) >= 3 and name[-1] in NAME_VERB_PREFIX_CHARS:
+            name = name[:-1]
+            end = start + len(name)
+        if len(name) < 2 or name in KNOWN_NAMES:
+            continue
+        if any(not (end <= a or start >= b) for a, b in occupied):
+            continue
+        mentions.append(Mention(name, start, end, "PERSON", "unknown"))
+        occupied.append((start, end))
+
     for word in sorted(OBJECT_WORDS, key=len, reverse=True):
         for match in re.finditer(re.escape(word), text):
             start, end = match.span()
@@ -183,6 +257,46 @@ def extract_mentions(text: str, backend: str = "rule") -> tuple[list[Mention], l
         backend_result = extract_backend_entities(text, backend)
         entities = _merge_entities(entities, backend_result.entities)
     return entities, extract_pronouns(text)
+
+
+def _pronoun_meta(pronoun: str) -> dict[str, str]:
+    """Infer pronoun metadata from an annotated training item."""
+    if pronoun in PRONOUNS:
+        return PRONOUNS[pronoun]
+    if pronoun in {"他", "她", "他们", "她们"}:
+        gender = "female" if "她" in pronoun else "male" if pronoun == "他" else "unknown"
+        number = "plural" if pronoun.endswith("们") else "singular"
+        return {"label": "PERSON_PRONOUN", "gender": gender, "number": number}
+    if pronoun in {"它", "它们"} or pronoun.startswith(("该", "这")):
+        number = "plural" if pronoun.endswith("们") or pronoun.startswith("这些") else "singular"
+        return {"label": "OBJECT_PRONOUN", "gender": "neutral", "number": number}
+    return {"label": "PERSON_PRONOUN", "gender": "unknown", "number": "singular"}
+
+
+def _entity_meta_from_pronoun(pronoun_meta: dict[str, str]) -> dict[str, str]:
+    """Infer antecedent metadata from the paired pronoun type."""
+    label_map = {
+        "PERSON_PRONOUN": "PERSON",
+        "OBJECT_PRONOUN": "OBJECT",
+        "ORG_PRONOUN": "ORG",
+    }
+    return {
+        "label": label_map.get(pronoun_meta["label"], "OBJECT"),
+        "gender": pronoun_meta.get("gender", "unknown"),
+    }
+
+
+def extend_lexicon_from_samples(samples: list[dict]) -> None:
+    """Add annotated pronouns and antecedents into the runtime lexicon."""
+    for sample in samples:
+        for item in sample.get("coreference", []):
+            pronoun = item.get("pronoun", "").strip()
+            antecedent = item.get("antecedent", "").strip()
+            if not pronoun or not antecedent:
+                continue
+            pronoun_meta = _pronoun_meta(pronoun)
+            LEXICON_PRONOUNS.setdefault(pronoun, pronoun_meta)
+            LEXICON_ENTITIES.setdefault(antecedent, _entity_meta_from_pronoun(pronoun_meta))
 
 
 def _merge_entities(primary: list[Mention], extra: list[Mention]) -> list[Mention]:

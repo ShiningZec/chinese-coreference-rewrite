@@ -12,6 +12,7 @@ from src import (
     CoreferenceResult,  # after_resolve
     ErrorCase,  # after_evaluate
     evaluate,  # after_evaluate
+    extend_lexicon_from_samples,  # mention_extractor
     Paragraph,  # annotator
     RawdataGather,  # data gather(not implemented yet)
     ResolverConfig,  # after_resolve
@@ -83,10 +84,24 @@ def relation_rows(results: list[CoreferenceResult]) -> list[dict]:
             "代词": item.pronoun.text,
             "先行词": item.antecedent.text,
             "分数": item.score,
+            "是否歧义": "是" if item.ambiguous else "否",
             "理由": "；".join(item.candidates[0].reasons),
         }
         for item in results
     ]
+
+
+def ambiguous_rows(results: list[CoreferenceResult]) -> list[dict]:
+    rows = []
+    for item in results:
+        if not item.ambiguous:
+            continue
+        rows.append({
+            "代词": item.pronoun.text,
+            "可能先行词": " / ".join(candidate.candidate.text for candidate in item.candidates[:2]),
+            "说明": "候选分数接近，建议人工确认后再改写。",
+        })
+    return rows
 
 
 def candidate_rows(results: list[CoreferenceResult]) -> list[dict]:
@@ -130,6 +145,10 @@ else:
     st.sidebar.caption("当前仍使用规则版 baseline，后续安装模型后可接入真实抽取结果。")
 
 demo_samples = load_json(DATASETS["演示集 demo"])
+dev_samples = load_json(DATASETS["开发集 dev"])
+train_path = DATA_DIR / "train.json"
+train_samples = load_json(train_path) if train_path.exists() else []
+extend_lexicon_from_samples(train_samples + demo_samples + dev_samples)
 analysis_tab, evaluation_tab, ablation_tab, annotator_tab = st.tabs([
     "单文本分析",
     "数据集评估",
@@ -156,6 +175,8 @@ with analysis_tab:
             st.subheader("原文高亮")
             st.markdown(render_highlighted_text(text, results), unsafe_allow_html=True)
             st.subheader("改写结果")
+            if any(result.ambiguous for result in results):
+                st.warning("检测到指代歧义，歧义代词已跳过自动改写。")
             st.success(rewritten)
 
         with right:
@@ -169,6 +190,10 @@ with analysis_tab:
             rows = relation_rows(results)
             if rows:
                 st.dataframe(rows, use_container_width=True, hide_index=True)
+                ambiguities = ambiguous_rows(results)
+                if ambiguities:
+                    st.warning("该文本存在多种可能解释。")
+                    st.dataframe(ambiguities, use_container_width=True, hide_index=True)
             else:
                 st.info("暂未识别到可消解的指代关系。")
 

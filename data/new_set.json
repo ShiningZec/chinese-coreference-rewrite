@@ -784,5 +784,296 @@
         "antecedent": "明月"
       }
     ]
+  },
+  {
+    "text": "中国商飞交付了C919，据说，该机型的国产化率正在不断提高。",
+    "coreference": [
+      {
+        "pronoun": "该机型",
+        "antecedent": "C919"
+      }
+    ]
+  },
+  {
+    "text": "林黛玉把手帕递给紫鹃，轻声嘱咐她收好它。",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "紫鹃"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "手帕"
+      }
+    ]
+  },
+  {
+    "text": "宁德时代与福特合作，这家巨头称将与它共同研发新技术。",
+    "coreference": [
+      {
+        "pronoun": "这家巨头",
+        "antecedent": "宁德时代"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "福特"
+      }
+    ]
+  },
+  {
+    "text": "鲁迅在书桌前沉思，他提笔写下了它，随后又划掉。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "鲁迅"
+      }
+    ]
+  },
+  {
+    "text": "环球影城新增了特效项目，该乐园表示它的体验感空前逼真。",
+    "coreference": [
+      {
+        "pronoun": "该乐园",
+        "antecedent": "环球影城"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "特效项目"
+      }
+    ]
+  },
+  {
+    "text": "王羲之写完《兰亭序》，他端详着它，心中满是感慨。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "王羲之"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "《兰亭序》"
+      }
+    ]
+  },
+  {
+    "text": "苏轼问佛印，你笑什么，他却只指了指他面前的江水。",
+    "coreference": [
+      {
+        "pronoun": "你",
+        "antecedent": "佛印"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "佛印"
+      }
+    ]
+  },
+  {
+    "text": "国家博物馆收录了这件文物，该馆称它为镇馆之宝。",
+    "coreference": [
+      {
+        "pronoun": "该馆",
+        "antecedent": "国家博物馆"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "这件文物"
+      }
+    ]
+  },
+  {
+    "text": "杨幂走进化妆间，她拿起粉底液，轻轻摇晃了它。",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "杨幂"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "粉底液"
+      }
+    ]
+  },
+  {
+    "text": "中芯国际量产了新制程，该企业表示它的良率已达预期。",
+    "coreference": [
+      {
+        "pronoun": "该企业",
+        "antecedent": "中芯国际"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新制程"
+      }
+    ]
+  },
+  {
+    "text": "唐僧对悟空说，你且退下，让我来劝说。",
+    "coreference": [
+      {
+        "pronoun": "你",
+        "antecedent": "悟空"
+      },
+      {
+        "pronoun": "我",
+        "antecedent": "唐僧"
+      }
+    ]
+  },
+  {
+    "text": "武汉大学的樱花开了，该校表示它们今年将提前进入盛放期。",
+    "coreference": [
+      {
+        "pronoun": "该校",
+        "antecedent": "武汉大学"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "樱花"
+      }
+    ]
+  },
+  {
+    "text": "大疆发布了新款无人机，该公司称它的避障能力全面升级。",
+    "coreference": [
+      {
+        "pronoun": "该公司",
+        "antecedent": "大疆"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新款无人机"
+      }
+    ]
+  },
+  {
+    "text": "宋徽宗提笔作画，他精心勾勒每一笔，然后为它题了诗。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "宋徽宗"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "画"
+      }
+    ]
+  },
+  {
+    "text": "理想汽车推出了纯电MPV，这家车企称它的续航达八百公里。",
+    "coreference": [
+      {
+        "pronoun": "这家车企",
+        "antecedent": "理想汽车"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "纯电MPV"
+      }
+    ]
+  },
+  {
+    "text": "蔡伦改进造纸术，他把树皮捣碎，再将它铺平晒干。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "蔡伦"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "树皮"
+      }
+    ]
+  },
+  {
+    "text": "中国海洋石油勘探了新气田，该公司称它可满足华南用气需求。",
+    "coreference": [
+      {
+        "pronoun": "该公司",
+        "antecedent": "中国海洋石油"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新气田"
+      }
+    ]
+  },
+  {
+    "text": "济公摇着破扇，他对路人笑了笑，然后用它指了指天。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "济公"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "破扇"
+      }
+    ]
+  },
+  {
+    "text": "复旦大学新建了脑科学中心，该校表示它将聚焦老年痴呆研究。",
+    "coreference": [
+      {
+        "pronoun": "该校",
+        "antecedent": "复旦大学"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "脑科学中心"
+      }
+    ]
+  },
+  {
+    "text": "顺丰升级了冷链网络，该公司称它能让生鲜损耗率降至1%以下。",
+    "coreference": [
+      {
+        "pronoun": "该公司",
+        "antecedent": "顺丰"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "冷链网络"
+      }
+    ]
+  },
+  {
+    "text": "包拯升堂审案，他怒视堂下犯人，问这人可认得这物证。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "包拯"
+      },
+      {
+        "pronoun": "这人",
+        "antecedent": "犯人"
+      }
+    ]
+  },
+  {
+    "text": "成都大熊猫基地引入新竹种，该基地称它更符合幼崽口味。",
+    "coreference": [
+      {
+        "pronoun": "该基地",
+        "antecedent": "成都大熊猫基地"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新竹种"
+      }
+    ]
+  },
+  {
+    "text": "俞敏洪走进直播间，他拿起一本新书，认真翻看了它的目录。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "俞敏洪"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "书"
+      }
+    ]
   }
 ]

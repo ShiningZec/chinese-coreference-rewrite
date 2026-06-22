@@ -67,6 +67,16 @@ streamlit run app.py --global.developmentMode false
 - `test.json`：60 条，用于最终评估。
 - `real_corpus.json`：40 条，更接近新闻、校园、企业场景的真实语料风格样本。
 - `samples.json`：120 条完整构造样本备份。
+- `new_set.json`：可选的新标注样本，放入 `data/` 后可继续接入训练。
+- `train.json`：可选的训练集，由新标注样本合并生成。
+
+接入新标注数据：
+
+```bash
+python scripts/prepare_training_data.py
+```
+
+如果 `data/new_set.json` 缺少 `rewrite` 字段，脚本会根据 `coreference` 自动补出改写文本，并合并生成 `data/train.json`。当前项目采用规则增强路线，这里的“训练”指把新标注样本并入运行时词表，而不是训练神经网络参数。
 
 ## 示例
 

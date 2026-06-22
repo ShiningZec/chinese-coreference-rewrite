@@ -1,0 +1,1164 @@
+[
+  {
+    "text": "小美会见了小刚，他对她说了句玩笑话。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "小刚"
+      },
+      {
+        "pronoun": "她",
+        "antecedent": "小美"
+      }
+    ],
+    "rewrite": "小美会见了小刚，小刚对小美说了句玩笑话。"
+  },
+  {
+    "text": "故宫修缮了太和殿，该殿宣布它将于明年开放。",
+    "coreference": [
+      {
+        "pronoun": "该殿",
+        "antecedent": "太和殿"
+      }
+    ],
+    "rewrite": "故宫修缮了太和殿，太和殿宣布它将于明年开放。"
+  },
+  {
+    "text": "张医生叫来王护士，她递给他一份病历。",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "王护士"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "张医生"
+      }
+    ],
+    "rewrite": "张医生叫来王护士，王护士递给张医生一份病历。"
+  },
+  {
+    "text": "华为公司推出了新手机，这家公司称它已预订一空。",
+    "coreference": [
+      {
+        "pronoun": "这家公司",
+        "antecedent": "华为公司"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新手机"
+      }
+    ],
+    "rewrite": "华为公司推出了新手机，华为公司称新手机已预订一空。"
+  },
+  {
+    "text": "苏轼写了首词，他把它藏在了书卷里。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "苏轼"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "词"
+      }
+    ],
+    "rewrite": "苏轼写了首词，苏轼把词藏在了书卷里。"
+  },
+  {
+    "text": "上海交通大学获奖了，该校把它的奖杯放进了陈列室。",
+    "coreference": [
+      {
+        "pronoun": "它",
+        "antecedent": "上海交通大学"
+      },
+      {
+        "pronoun": "该校",
+        "antecedent": "上海交通大学"
+      }
+    ],
+    "rewrite": "上海交通大学获奖了，上海交通大学把上海交通大学的奖杯放进了陈列室。"
+  },
+  {
+    "text": "陈经理批评了小李，但她觉得他的做法也有道理。",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "陈经理"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "小李"
+      }
+    ],
+    "rewrite": "陈经理批评了小李，但陈经理觉得小李的做法也有道理。"
+  },
+  {
+    "text": "特斯拉降价了，该品牌表示这是它的常态策略。",
+    "coreference": [
+      {
+        "pronoun": "它",
+        "antecedent": "特斯拉"
+      },
+      {
+        "pronoun": "该品牌",
+        "antecedent": "特斯拉"
+      }
+    ],
+    "rewrite": "特斯拉降价了，特斯拉表示这是特斯拉的常态策略。"
+  },
+  {
+    "text": "奶奶喊爷爷吃饭，他让她先坐下。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "爷爷"
+      },
+      {
+        "pronoun": "她",
+        "antecedent": "奶奶"
+      }
+    ],
+    "rewrite": "奶奶喊爷爷吃饭，爷爷让奶奶先坐下。"
+  },
+  {
+    "text": "字节跳动开发了新算法，这家公司说它能提升效率。",
+    "coreference": [
+      {
+        "pronoun": "这家公司",
+        "antecedent": "字节跳动"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新算法"
+      }
+    ],
+    "rewrite": "字节跳动开发了新算法，字节跳动说新算法能提升效率。"
+  },
+  {
+    "text": "孔子问子路，弟子回答了老师的问题。",
+    "coreference": [
+      {
+        "pronoun": "弟子",
+        "antecedent": "子路"
+      },
+      {
+        "pronoun": "老师",
+        "antecedent": "孔子"
+      }
+    ],
+    "rewrite": "孔子问子路，子路回答了孔子的问题。"
+  },
+  {
+    "text": "武汉长江大桥检修了，据说它的钢梁已加固。",
+    "coreference": [
+      {
+        "pronoun": "它",
+        "antecedent": "武汉长江大桥"
+      }
+    ],
+    "rewrite": "武汉长江大桥检修了，据说武汉长江大桥的钢梁已加固。"
+  },
+  {
+    "text": "刘老师布置了作业，她把它们分成了三组。",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "刘老师"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "作业"
+      }
+    ],
+    "rewrite": "刘老师布置了作业，刘老师把作业们分成了三组。"
+  },
+  {
+    "text": "中石化宣布新项目，该企业称它将投资百亿。",
+    "coreference": [
+      {
+        "pronoun": "该企业",
+        "antecedent": "中石化"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新项目"
+      }
+    ],
+    "rewrite": "中石化宣布新项目，中石化称新项目将投资百亿。"
+  },
+  {
+    "text": "林黛玉递给贾宝玉手帕，他轻轻接过了它。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "贾宝玉"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "手帕"
+      }
+    ],
+    "rewrite": "林黛玉递给贾宝玉手帕，贾宝玉轻轻接过了手帕。"
+  },
+  {
+    "text": "小米公司发布了新汽车，该公司表示它会在年内交付。",
+    "coreference": [
+      {
+        "pronoun": "该公司",
+        "antecedent": "小米公司"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新汽车"
+      }
+    ],
+    "rewrite": "小米公司发布了新汽车，小米公司表示新汽车会在年内交付。"
+  },
+  {
+    "text": "导演喊了演员甲，她让他再试一次。",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "导演"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "演员甲"
+      }
+    ],
+    "rewrite": "导演喊了演员甲，导演让演员甲再试一次。"
+  },
+  {
+    "text": "西湖治理了水质，因此这片湖的透明度提升了。",
+    "coreference": [
+      {
+        "pronoun": "湖",
+        "antecedent": "西湖"
+      }
+    ],
+    "rewrite": "西西湖治理了水质，因此这片湖的透明度提升了。"
+  },
+  {
+    "text": "周总监叫住助理，她把文件交给了他。",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "助理"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "周总监"
+      }
+    ],
+    "rewrite": "周总监叫住助理，助理把文件交给了周总监。"
+  },
+  {
+    "text": "央视播出了纪录片，该频道称它获得了高收视率。",
+    "coreference": [
+      {
+        "pronoun": "该频道",
+        "antecedent": "央视"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "纪录片"
+      }
+    ],
+    "rewrite": "央视播出了纪录片，央视称纪录片获得了高收视率。"
+  },
+  {
+    "text": "诸葛亮交给姜维一个锦囊，他嘱咐他危急时打开它。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "诸葛亮"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "姜维"
+      }
+    ],
+    "rewrite": "诸葛亮交给姜维一个锦囊，诸葛亮嘱咐姜维危急时打开它。"
+  },
+  {
+    "text": "比亚迪下线了新车型，这家车企称它的续航超过一千公里。",
+    "coreference": [
+      {
+        "pronoun": "这家车企",
+        "antecedent": "比亚迪"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新车型"
+      }
+    ],
+    "rewrite": "比亚迪下线了新车型，比亚迪称新车型的续航超过一千公里。"
+  },
+  {
+    "text": "袁隆平看着试验田，他轻轻抚摸着稻穗，心里念着它们。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "袁隆平"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "稻穗"
+      }
+    ],
+    "rewrite": "袁隆平看着试验田，袁隆平轻轻抚摸着稻穗，心里念着稻穗们。"
+  },
+  {
+    "text": "敦煌研究院修复了壁画，该院宣布它将对外限时展出。",
+    "coreference": [
+      {
+        "pronoun": "该院",
+        "antecedent": "敦煌研究院"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "壁画"
+      }
+    ],
+    "rewrite": "敦煌研究院修复了壁画，敦煌研究院宣布壁画将对外限时展出。"
+  },
+  {
+    "text": "安妮把钥匙递给杰克，他接过它并向她道了谢。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "杰克"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "钥匙"
+      },
+      {
+        "pronoun": "她",
+        "antecedent": "安妮"
+      }
+    ],
+    "rewrite": "安妮把钥匙递给杰克，杰克接过钥匙并向安妮道了谢。"
+  },
+  {
+    "text": "茅台调整了出厂价，该品牌表示这是它的正常市场策略。",
+    "coreference": [
+      {
+        "pronoun": "该品牌",
+        "antecedent": "茅台"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "茅台"
+      }
+    ],
+    "rewrite": "茅台调整了出厂价，茅台表示这是茅台的正常市场策略。"
+  },
+  {
+    "text": "屠呦呦翻阅旧笔记，她从中发现了关键线索，并把它圈了出来。",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "屠呦呦"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "关键线索"
+      }
+    ],
+    "rewrite": "屠呦呦翻阅旧笔记，屠呦呦从中发现了关键线索，并把关键线索圈了出来。"
+  },
+  {
+    "text": "浙江大学新建了图书馆，该校称它将成为地标建筑。",
+    "coreference": [
+      {
+        "pronoun": "该校",
+        "antecedent": "浙江大学"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "图书馆"
+      }
+    ],
+    "rewrite": "浙江大学新建了图书馆，浙江大学称图书馆将成为地标建筑。"
+  },
+  {
+    "text": "曹操对司马懿笑了笑，但他猜不透他在想什么。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "司马懿"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "曹操"
+      }
+    ],
+    "rewrite": "曹操对司马懿笑了笑，但司马懿猜不透曹操在想什么。"
+  },
+  {
+    "text": "宁德时代发布了凝聚态电池，这家公司说它已通过安全测试。",
+    "coreference": [
+      {
+        "pronoun": "这家公司",
+        "antecedent": "宁德时代"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "凝聚态电池"
+      }
+    ],
+    "rewrite": "宁德时代发布了凝聚态电池，宁德时代说凝聚态电池已通过安全测试。"
+  },
+  {
+    "text": "李清照写下这首词，她将它藏于箱底，不愿示人。",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "李清照"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "词"
+      }
+    ],
+    "rewrite": "李清照写下这首词，李清照将词藏于箱底，不愿示人。"
+  },
+  {
+    "text": "成都大熊猫基地迎来新生幼崽，该基地表示它的体重非常健康。",
+    "coreference": [
+      {
+        "pronoun": "该基地",
+        "antecedent": "成都大熊猫基地"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新生幼崽"
+      }
+    ],
+    "rewrite": "成都大熊猫基地迎来新生幼崽，成都大熊猫基地表示新生幼崽的体重非常健康。"
+  },
+  {
+    "text": "王教授指点张同学，他反复提醒她要核对数据，否则它会出问题。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "王教授"
+      },
+      {
+        "pronoun": "她",
+        "antecedent": "张同学"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "数据"
+      }
+    ],
+    "rewrite": "王教授指点张同学，王教授反复提醒张同学要核对数据，否则数据会出问题。"
+  },
+  {
+    "text": "顺丰开通了新航线，该公司称它能将物流时效缩短至半天。",
+    "coreference": [
+      {
+        "pronoun": "该公司",
+        "antecedent": "顺丰"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新航线"
+      }
+    ],
+    "rewrite": "顺丰开通了新航线，顺丰称新航线能将物流时效缩短至半天。"
+  },
+  {
+    "text": "国家大剧院推出新剧目，该剧院称它融合了传统与现代元素。",
+    "coreference": [
+      {
+        "pronoun": "该剧院",
+        "antecedent": "国家大剧院"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新剧目"
+      }
+    ],
+    "rewrite": "国家大剧院推出新剧目，国家大剧院称新剧目融合了传统与现代元素。"
+  },
+  {
+    "text": "杨利伟回忆太空之旅，他依然记得当时看到地球的震撼。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "杨利伟"
+      }
+    ],
+    "rewrite": "杨利伟回忆太空之旅，杨利伟依然记得当时看到地球的震撼。"
+  },
+  {
+    "text": "拼多多上线了跨境平台，该平台表示它首日订单已破百万。",
+    "coreference": [
+      {
+        "pronoun": "该平台",
+        "antecedent": "跨境平台"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "跨境平台"
+      }
+    ],
+    "rewrite": "拼多多上线了跨境平台，跨境平台表示跨境平台首日订单已破百万。"
+  },
+  {
+    "text": "孙悟空调侃猪八戒，笑他贪吃，但他也不恼。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "猪八戒"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "猪八戒"
+      }
+    ],
+    "rewrite": "孙悟空调侃猪八戒，笑猪八戒贪吃，但猪八戒也不恼。"
+  },
+  {
+    "text": "秦岭隧道全线贯通，据称，这条通道将极大改善南北交通。",
+    "coreference": [
+      {
+        "pronoun": "这条通道",
+        "antecedent": "秦岭隧道"
+      }
+    ],
+    "rewrite": "秦岭隧道全线贯通，据称，秦岭隧道将极大改善南北交通。"
+  },
+  {
+    "text": "爱因斯坦对玻尔说，他认为他的理论并不完备。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "爱因斯坦"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "玻尔"
+      }
+    ],
+    "rewrite": "爱因斯坦对玻尔说，爱因斯坦认为玻尔的理论并不完备。"
+  },
+  {
+    "text": "中国空间站完成了对接，该站表示它将迎来新一批实验设备。",
+    "coreference": [
+      {
+        "pronoun": "该站",
+        "antecedent": "中国空间站"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "中国空间站"
+      }
+    ],
+    "rewrite": "中国空间站完成了对接，中国空间站表示中国空间站将迎来新一批实验设备。"
+  },
+  {
+    "text": "谷爱凌拿起滑雪板，她仔细检查了它的固定器。",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "谷爱凌"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "滑雪板"
+      }
+    ],
+    "rewrite": "谷爱凌拿起滑雪板，谷爱凌仔细检查了滑雪板的固定器。"
+  },
+  {
+    "text": "中信集团收购了这块地皮，该集团称它计划建造总部大楼。",
+    "coreference": [
+      {
+        "pronoun": "该集团",
+        "antecedent": "中信集团"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "这块地皮"
+      }
+    ],
+    "rewrite": "中信集团收购了这块地皮，中信集团称这块地皮计划建造总部大楼。"
+  },
+  {
+    "text": "莫言收到读者来信，他逐封阅读了它们，并从中获得感动。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "莫言"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "来信"
+      }
+    ],
+    "rewrite": "莫言收到读者来信，莫言逐封阅读了来信们，并从中获得感动。"
+  },
+  {
+    "text": "故宫博物院展出《千里江山图》，该院规定观众不能靠近它。",
+    "coreference": [
+      {
+        "pronoun": "该院",
+        "antecedent": "故宫博物院"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "《千里江山图》"
+      }
+    ],
+    "rewrite": "故宫博物院展出《千里江山图》，故宫博物院规定观众不能靠近《千里江山图》。"
+  },
+  {
+    "text": "李佳琦推荐了这款面霜，他称它的保湿效果极佳。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "李佳琦"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "这款面霜"
+      }
+    ],
+    "rewrite": "李佳琦推荐了这款面霜，李佳琦称这款面霜的保湿效果极佳。"
+  },
+  {
+    "text": "中石油勘探了新油田，该公司表示它的储量相当可观。",
+    "coreference": [
+      {
+        "pronoun": "该公司",
+        "antecedent": "中石油"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新油田"
+      }
+    ],
+    "rewrite": "中石油勘探了新油田，中石油表示新油田的储量相当可观。"
+  },
+  {
+    "text": "孔子批评了子贡，但他知道老师是在激励他。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "子贡"
+      },
+      {
+        "pronoun": "老师",
+        "antecedent": "孔子"
+      }
+    ],
+    "rewrite": "孔子批评了子贡，但子贡知道孔子是在激励他。"
+  },
+  {
+    "text": "三亚推出了旅游新路线，该市希望它能吸引更多家庭游客。",
+    "coreference": [
+      {
+        "pronoun": "它",
+        "antecedent": "新路线"
+      }
+    ],
+    "rewrite": "三亚推出了旅游新路线，该市希望新路线能吸引更多家庭游客。"
+  },
+  {
+    "text": "张艺谋指导了开幕式，他对演员们说，你们要相信它一定震撼。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "张艺谋"
+      },
+      {
+        "pronoun": "你",
+        "antecedent": "演员"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "开幕式"
+      }
+    ],
+    "rewrite": "张艺谋指导了开幕式，张艺谋对演员们说，演员们要相信开幕式一定震撼。"
+  },
+  {
+    "text": "寒武纪发布了新款AI芯片，这家公司称它的算力提升三倍。",
+    "coreference": [
+      {
+        "pronoun": "这家公司",
+        "antecedent": "寒武纪"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新款AI芯片"
+      }
+    ],
+    "rewrite": "寒武纪发布了新款AI芯片，寒武纪称新款AI芯片的算力提升三倍。"
+  },
+  {
+    "text": "李清照倚窗远望，她轻声吟诵了自己的新词，并把它记在纸上。",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "李清照"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新词"
+      }
+    ],
+    "rewrite": "李清照倚窗远望，李清照轻声吟诵了自己的新词，并把新词记在纸上。"
+  },
+  {
+    "text": "上海迪士尼扩建了主题园区，该乐园宣布它将在暑期开放。",
+    "coreference": [
+      {
+        "pronoun": "该乐园",
+        "antecedent": "上海迪士尼"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "主题园区"
+      }
+    ],
+    "rewrite": "上海迪士尼扩建了主题园区，上海迪士尼宣布主题园区将在暑期开放。"
+  },
+  {
+    "text": "曹雪芹笔下的人物鲜活，他赋予它们各自命运，而读者常为它们叹息。",
+    "coreference": [
+      {
+        "pronoun": "它",
+        "antecedent": "人物"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "曹雪芹"
+      }
+    ],
+    "rewrite": "曹雪芹笔下的人物鲜活，曹雪芹赋予人物们各自命运，而读者常为它们叹息。"
+  },
+  {
+    "text": "央视总台转播了赛事，该台表示它的收视率创下新高。",
+    "coreference": [
+      {
+        "pronoun": "该台",
+        "antecedent": "央视总台"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "赛事"
+      }
+    ],
+    "rewrite": "央视总台转播了赛事，央视总台表示赛事的收视率创下新高。"
+  },
+  {
+    "text": "贵州茅台推出联名咖啡，产品负责人声称它的酒香与咖啡完美融合。",
+    "coreference": [
+      {
+        "pronoun": "它",
+        "antecedent": "联名咖啡"
+      }
+    ],
+    "rewrite": "贵州茅台推出联名咖啡，产品负责人声称联名咖啡的酒香与咖啡完美融合。"
+  },
+  {
+    "text": "袁隆平望向稻田，他欣慰地看到它们正随风起伏，长势喜人。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "袁隆平"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "稻田"
+      }
+    ],
+    "rewrite": "袁隆平望向稻田，袁隆平欣慰地看到稻田们正随风起伏，长势喜人。"
+  },
+  {
+    "text": "刘备三顾茅庐请诸葛亮，他最终答应辅佐军政。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "诸葛亮"
+      }
+    ],
+    "rewrite": "刘备三顾茅庐请诸葛亮，诸葛亮最终答应辅佐军政。"
+  },
+  {
+    "text": "阿里云发布了新系统，该平台称它的稳定性大幅提升。",
+    "coreference": [
+      {
+        "pronoun": "该平台",
+        "antecedent": "阿里云"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新系统"
+      }
+    ],
+    "rewrite": "阿里云发布了新系统，阿里云称新系统的稳定性大幅提升。"
+  },
+  {
+    "text": "南京博物院修复了青铜鼎，该院宣布它将于下月展出。",
+    "coreference": [
+      {
+        "pronoun": "该院",
+        "antecedent": "南京博物院"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "青铜鼎"
+      }
+    ],
+    "rewrite": "南京博物院修复了青铜鼎，南京博物院宣布青铜鼎将于下月展出。"
+  },
+  {
+    "text": "小美把球拍交给教练，他仔细检查了它的胶皮。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "教练"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "球拍"
+      }
+    ],
+    "rewrite": "小美把球拍交给教练，教练仔细检查了球拍的胶皮。"
+  },
+  {
+    "text": "李白举杯邀明月，他对着它吟诵了一首新诗。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "李白"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "明月"
+      }
+    ],
+    "rewrite": "李白举杯邀明月，李白对着明月吟诵了一首新诗。"
+  },
+  {
+    "text": "中国商飞交付了C919，据说，该机型的国产化率正在不断提高。",
+    "coreference": [
+      {
+        "pronoun": "该机型",
+        "antecedent": "C919"
+      }
+    ],
+    "rewrite": "中国商飞交付了C919，据说，C919的国产化率正在不断提高。"
+  },
+  {
+    "text": "林黛玉把手帕递给紫鹃，轻声嘱咐她收好它。",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "紫鹃"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "手帕"
+      }
+    ],
+    "rewrite": "林黛玉把手帕递给紫鹃，轻声嘱咐紫鹃收好手帕。"
+  },
+  {
+    "text": "宁德时代与福特合作，这家巨头称将与它共同研发新技术。",
+    "coreference": [
+      {
+        "pronoun": "这家巨头",
+        "antecedent": "宁德时代"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "福特"
+      }
+    ],
+    "rewrite": "宁德时代与福特合作，宁德时代称将与福特共同研发新技术。"
+  },
+  {
+    "text": "鲁迅在书桌前沉思，他提笔写下了它，随后又划掉。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "鲁迅"
+      }
+    ],
+    "rewrite": "鲁迅在书桌前沉思，鲁迅提笔写下了它，随后又划掉。"
+  },
+  {
+    "text": "环球影城新增了特效项目，该乐园表示它的体验感空前逼真。",
+    "coreference": [
+      {
+        "pronoun": "该乐园",
+        "antecedent": "环球影城"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "特效项目"
+      }
+    ],
+    "rewrite": "环球影城新增了特效项目，环球影城表示特效项目的体验感空前逼真。"
+  },
+  {
+    "text": "王羲之写完《兰亭序》，他端详着它，心中满是感慨。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "王羲之"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "《兰亭序》"
+      }
+    ],
+    "rewrite": "王羲之写完《兰亭序》，王羲之端详着《兰亭序》，心中满是感慨。"
+  },
+  {
+    "text": "苏轼问佛印，你笑什么，他却只指了指他面前的江水。",
+    "coreference": [
+      {
+        "pronoun": "你",
+        "antecedent": "佛印"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "佛印"
+      }
+    ],
+    "rewrite": "苏轼问佛印，佛印笑什么，佛印却只指了指他面前的江水。"
+  },
+  {
+    "text": "国家博物馆收录了这件文物，该馆称它为镇馆之宝。",
+    "coreference": [
+      {
+        "pronoun": "该馆",
+        "antecedent": "国家博物馆"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "这件文物"
+      }
+    ],
+    "rewrite": "国家博物馆收录了这件文物，国家博物馆称这件文物为镇馆之宝。"
+  },
+  {
+    "text": "杨幂走进化妆间，她拿起粉底液，轻轻摇晃了它。",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "杨幂"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "粉底液"
+      }
+    ],
+    "rewrite": "杨幂走进化妆间，杨幂拿起粉底液，轻轻摇晃了粉底液。"
+  },
+  {
+    "text": "中芯国际量产了新制程，该企业表示它的良率已达预期。",
+    "coreference": [
+      {
+        "pronoun": "该企业",
+        "antecedent": "中芯国际"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新制程"
+      }
+    ],
+    "rewrite": "中芯国际量产了新制程，中芯国际表示新制程的良率已达预期。"
+  },
+  {
+    "text": "唐僧对悟空说，你且退下，让我来劝说。",
+    "coreference": [
+      {
+        "pronoun": "你",
+        "antecedent": "悟空"
+      },
+      {
+        "pronoun": "我",
+        "antecedent": "唐僧"
+      }
+    ],
+    "rewrite": "唐僧对悟空说，悟空且退下，让唐僧来劝说。"
+  },
+  {
+    "text": "武汉大学的樱花开了，该校表示它们今年将提前进入盛放期。",
+    "coreference": [
+      {
+        "pronoun": "该校",
+        "antecedent": "武汉大学"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "樱花"
+      }
+    ],
+    "rewrite": "武汉大学的樱花开了，武汉大学表示樱花们今年将提前进入盛放期。"
+  },
+  {
+    "text": "大疆发布了新款无人机，该公司称它的避障能力全面升级。",
+    "coreference": [
+      {
+        "pronoun": "该公司",
+        "antecedent": "大疆"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新款无人机"
+      }
+    ],
+    "rewrite": "大疆发布了新款无人机，大疆称新款无人机的避障能力全面升级。"
+  },
+  {
+    "text": "宋徽宗提笔作画，他精心勾勒每一笔，然后为它题了诗。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "宋徽宗"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "画"
+      }
+    ],
+    "rewrite": "宋徽宗提笔作画，宋徽宗精心勾勒每一笔，然后为画题了诗。"
+  },
+  {
+    "text": "理想汽车推出了纯电MPV，这家车企称它的续航达八百公里。",
+    "coreference": [
+      {
+        "pronoun": "这家车企",
+        "antecedent": "理想汽车"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "纯电MPV"
+      }
+    ],
+    "rewrite": "理想汽车推出了纯电MPV，理想汽车称纯电MPV的续航达八百公里。"
+  },
+  {
+    "text": "蔡伦改进造纸术，他把树皮捣碎，再将它铺平晒干。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "蔡伦"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "树皮"
+      }
+    ],
+    "rewrite": "蔡伦改进造纸术，蔡伦把树皮捣碎，再将树皮铺平晒干。"
+  },
+  {
+    "text": "中国海洋石油勘探了新气田，该公司称它可满足华南用气需求。",
+    "coreference": [
+      {
+        "pronoun": "该公司",
+        "antecedent": "中国海洋石油"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新气田"
+      }
+    ],
+    "rewrite": "中国海洋石油勘探了新气田，中国海洋石油称新气田可满足华南用气需求。"
+  },
+  {
+    "text": "济公摇着破扇，他对路人笑了笑，然后用它指了指天。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "济公"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "破扇"
+      }
+    ],
+    "rewrite": "济公摇着破扇，济公对路人笑了笑，然后用破扇指了指天。"
+  },
+  {
+    "text": "复旦大学新建了脑科学中心，该校表示它将聚焦老年痴呆研究。",
+    "coreference": [
+      {
+        "pronoun": "该校",
+        "antecedent": "复旦大学"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "脑科学中心"
+      }
+    ],
+    "rewrite": "复旦大学新建了脑科学中心，复旦大学表示脑科学中心将聚焦老年痴呆研究。"
+  },
+  {
+    "text": "顺丰升级了冷链网络，该公司称它能让生鲜损耗率降至1%以下。",
+    "coreference": [
+      {
+        "pronoun": "该公司",
+        "antecedent": "顺丰"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "冷链网络"
+      }
+    ],
+    "rewrite": "顺丰升级了冷链网络，顺丰称冷链网络能让生鲜损耗率降至1%以下。"
+  },
+  {
+    "text": "包拯升堂审案，他怒视堂下犯人，问这人可认得这物证。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "包拯"
+      },
+      {
+        "pronoun": "这人",
+        "antecedent": "犯人"
+      }
+    ],
+    "rewrite": "包拯升堂审案，包拯怒视堂下犯人，问犯人可认得这物证。"
+  },
+  {
+    "text": "成都大熊猫基地引入新竹种，该基地称它更符合幼崽口味。",
+    "coreference": [
+      {
+        "pronoun": "该基地",
+        "antecedent": "成都大熊猫基地"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "新竹种"
+      }
+    ],
+    "rewrite": "成都大熊猫基地引入新竹种，成都大熊猫基地称新竹种更符合幼崽口味。"
+  },
+  {
+    "text": "俞敏洪走进直播间，他拿起一本新书，认真翻看了它的目录。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "俞敏洪"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "书"
+      }
+    ],
+    "rewrite": "俞敏洪走进直播间，俞敏洪拿起一本新书，认真翻看了书的目录。"
+  }
+]

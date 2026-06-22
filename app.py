@@ -30,6 +30,15 @@ DATASETS = {
     "真实语料 real_corpus": DATA_DIR / "real_corpus.json",
     "完整样本 samples": DATA_DIR / "samples.json",
 }
+OPTIONAL_DATASETS = {
+    "训练集 train": DATA_DIR / "train.json",
+    "新标注集 new_set": DATA_DIR / "new_set.json",
+}
+DATASETS.update({
+    label: path
+    for label, path in OPTIONAL_DATASETS.items()
+    if path.exists()
+})
 BACKENDS = {
     "规则版 baseline": "rule",
     "HanLP 增强接口": "hanlp",

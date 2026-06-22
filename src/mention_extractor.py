@@ -14,7 +14,7 @@ PRONOUNS: dict[str, dict[str, str]] = {
     "该项目": {"label": "OBJECT_PRONOUN", "gender": "neutral", "number": "singular"},
     "该系统": {"label": "OBJECT_PRONOUN", "gender": "neutral", "number": "singular"},
     "该报告": {"label": "OBJECT_PRONOUN", "gender": "neutral", "number": "singular"},
-    "该平台": {"label": "OBJECT_PRONOUN", "gender": "neutral", "number": "singular"},
+    "该平台": {"label": "ORG_PRONOUN", "gender": "neutral", "number": "singular"},
     "该通知": {"label": "OBJECT_PRONOUN", "gender": "neutral", "number": "singular"},
     "该政策": {"label": "OBJECT_PRONOUN", "gender": "neutral", "number": "singular"},
     "该方案": {"label": "OBJECT_PRONOUN", "gender": "neutral", "number": "singular"},
@@ -108,6 +108,31 @@ NAME_VERB_SUFFIXES = (
 NAME_VERB_PREFIX_CHARS = set("整准确阅读写拿放给把对向替帮为说讲问看见遇找邀采拜访认表")
 LEXICON_ENTITIES: dict[str, dict[str, str]] = {}
 LEXICON_PRONOUNS: dict[str, dict[str, str]] = {}
+
+ORG_PRONOUN_TERMS = (
+    "公司",
+    "学校",
+    "该校",
+    "学院",
+    "医院",
+    "研究院",
+    "博物院",
+    "剧院",
+    "集团",
+    "平台",
+    "车企",
+    "乐园",
+    "馆",
+    "台",
+    "频道",
+    "基地",
+    "巨头",
+    "企业",
+    "团队",
+    "机构",
+    "银行",
+    "政府",
+)
 
 OBJECT_WORDS = {
     "书",
@@ -261,6 +286,8 @@ def extract_mentions(text: str, backend: str = "rule") -> tuple[list[Mention], l
 
 def _pronoun_meta(pronoun: str) -> dict[str, str]:
     """Infer pronoun metadata from an annotated training item."""
+    if any(term in pronoun for term in ORG_PRONOUN_TERMS):
+        return {"label": "ORG_PRONOUN", "gender": "neutral", "number": "singular"}
     if pronoun in PRONOUNS:
         return PRONOUNS[pronoun]
     if pronoun in {"他", "她", "他们", "她们"}:
@@ -296,7 +323,15 @@ def extend_lexicon_from_samples(samples: list[dict]) -> None:
                 continue
             pronoun_meta = _pronoun_meta(pronoun)
             LEXICON_PRONOUNS.setdefault(pronoun, pronoun_meta)
-            LEXICON_ENTITIES.setdefault(antecedent, _entity_meta_from_pronoun(pronoun_meta))
+            entity_meta = _entity_meta_from_pronoun(pronoun_meta)
+            current_meta = LEXICON_ENTITIES.get(antecedent)
+            if current_meta is None:
+                LEXICON_ENTITIES[antecedent] = entity_meta
+            elif current_meta["label"] == "OBJECT" and entity_meta["label"] in {"ORG", "PERSON"}:
+                # Prefer a more specific entity type learned from annotated aliases.
+                LEXICON_ENTITIES[antecedent] = entity_meta
+            elif current_meta.get("gender") == "unknown" and entity_meta.get("gender") != "unknown":
+                LEXICON_ENTITIES[antecedent] = {**current_meta, "gender": entity_meta["gender"]}
 
 
 def _merge_entities(primary: list[Mention], extra: list[Mention]) -> list[Mention]:

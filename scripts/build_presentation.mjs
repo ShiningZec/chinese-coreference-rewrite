@@ -257,6 +257,12 @@ async function main() {
     width: 820,
     height: 38,
   }, { fontSize: 26, color: COLORS.muted });
+  addText(slide1, "项目成员：郭英恺 10245102433  /  刘毅恒 10245102406", {
+    left: 74,
+    top: 268,
+    width: 820,
+    height: 32,
+  }, { fontSize: 22, color: COLORS.slate });
   addMetric(slide1, "新标注样本", `${train.length || 85} 条`, "接入 train.json，用于规则增强与错误分析", {
     left: 72,
     top: 350,
@@ -307,7 +313,7 @@ async function main() {
 
   const slide3 = deck.slides.add();
   setBg(slide3);
-  addSlideTitle(slide3, "任务定义：识别、消解、改写", "核心任务");
+  addSlideTitle(slide3, "主要功能与目标用户", "核心任务");
   addProcess(slide3, [
     { title: "输入文本", body: "用户输入一句或一段中文" },
     { title: "抽取候选", body: "识别实体、代词和指代表达" },
@@ -315,6 +321,18 @@ async function main() {
     { title: "文本改写", body: "用先行词替换可消解代词" },
     { title: "可视化", body: "展示高亮、候选得分和错误" },
   ], 220);
+  addText(slide3, "目标用户：NLP 课程学习者、中文文本处理者、问答/摘要系统开发者", {
+    left: 132,
+    top: 408,
+    width: 1000,
+    height: 36,
+  }, { fontSize: 23, bold: true, color: COLORS.blue, alignment: "center" });
+  addText(slide3, "使用场景：课堂演示、文本改写辅助、数据标注与错误分析、下游任务预处理", {
+    left: 132,
+    top: 462,
+    width: 1000,
+    height: 36,
+  }, { fontSize: 22, color: COLORS.slate, alignment: "center" });
   addFooter(slide3, 3);
 
   const slide4 = deck.slides.add();
@@ -452,14 +470,14 @@ async function main() {
 
   const slide11 = deck.slides.add();
   setBg(slide11);
-  addSlideTitle(slide11, "典型错误样本", "案例复盘");
-  addSimpleTable(slide11, ["类型", "样本", "问题"], [
-    ["多人物", "小美会见小刚，他对她说话", "角色可反转，需语义判断"],
-    ["称谓", "孔子问子路，弟子回答老师", "老师/弟子依赖身份知识"],
-    ["粒度", "它们 -> 稻穗", "gold 写作“它”，原文为“它们”"],
-    ["组织", "该院 -> 博物院", "候选过近导致偏向展品"],
-    ["过度预测", "鲁迅写下了它", "上下文没有 gold 指代"],
-  ], { left: 86, top: 162, width: 1108, height: 292 }, [150, 520, 438]);
+  addSlideTitle(slide11, "测试用例与典型表现", "程序验证");
+  addSimpleTable(slide11, ["用例", "输入", "系统表现"], [
+    ["基础", "小明把书给小红，因为她需要它", "她->小红，它->书"],
+    ["物体", "马斯克整理了书，他确认它", "人物与物体均可改写"],
+    ["歧义", "马云会见马斯克，他对他说话", "提示歧义，跳过自动改写"],
+    ["组织", "博物院展出瓷器，该院开放展厅", "该院->博物院"],
+    ["称谓", "孔子问子路，弟子回答老师", "暴露身份知识不足"],
+  ], { left: 86, top: 162, width: 1108, height: 292 }, [150, 540, 418]);
   addFooter(slide11, 11);
 
   const slide12 = deck.slides.add();
@@ -513,7 +531,8 @@ async function main() {
     "完成了中文指代消解、文本改写、可视化评估与云端展示闭环。",
     "新增 85 条标注数据，并自动生成 rewrite 与 train.json。",
     "通过组织指代增强，训练集 F1 提升到 0.8765。",
-    "错误分析揭示了后续 BERT 语义匹配与 span 级评估的必要性。",
+    "开发中解决了数据补全、歧义跳过、云端展示和错误归因问题。",
+    "反思：规则可解释但语义能力有限，后续应引入 BERT 与 span 级评估。",
   ], { left: 112, top: 210, width: 880, height: 260 }, { fontSize: 25 });
   addText(slide14, "从可解释 baseline 出发，逐步走向更真实的中文语义理解。", {
     left: 112,

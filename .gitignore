@@ -7,9 +7,17 @@
 # python
 *.pyc
 __pycache__/
+.env
 
 # streamlit
 .streamlit/
+
+# generated QA artifacts
+outputs/*.inspect.ndjson
+outputs/pdf_extracted_text.txt
+outputs/pdf_review_*/
+outputs/presentation_qa/
+reports/rendered_*/
 
 # test.py
 test.py
@@ -19,3 +27,6 @@ test.py
 
 # test_dump
 data/test_dump.json
+
+# external raw datasets
+external_data/

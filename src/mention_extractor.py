@@ -26,6 +26,7 @@ PRONOUNS: dict[str, dict[str, str]] = {
     "该城市": {"label": "OBJECT_PRONOUN", "gender": "neutral", "number": "singular"},
     "该企业": {"label": "ORG_PRONOUN", "gender": "neutral", "number": "singular"},
     "该团队": {"label": "ORG_PRONOUN", "gender": "neutral", "number": "singular"},
+    "其": {"label": "ORG_PRONOUN", "gender": "neutral", "number": "singular"},
     "这些电脑": {"label": "OBJECT_PRONOUN", "gender": "neutral", "number": "plural"},
     "这些作业": {"label": "OBJECT_PRONOUN", "gender": "neutral", "number": "plural"},
     "这本书": {"label": "OBJECT_PRONOUN", "gender": "neutral", "number": "singular"},
@@ -160,8 +161,8 @@ OBJECT_WORDS = {
 }
 
 ORG_WORDS = {"学校", "医院", "银行", "政府", "团队", "研究团队", "企业"}
-ORG_SUFFIXES = ("公司", "大学", "学校", "医院", "银行", "政府", "团队", "企业")
-ORG_TRIM_MARKERS = ("把", "给", "买", "了", "发布", "加入", "完成", "表示", "认为")
+ORG_SUFFIXES = ("公司", "集团", "平台", "大学", "学校", "医院", "银行", "政府", "团队", "企业")
+ORG_TRIM_MARKERS = ("把", "给", "买", "了", "发布", "加入", "完成", "表示", "认为", "服务")
 
 
 def _trim_org_span(text: str, start: int, end: int) -> tuple[str, int, int]:

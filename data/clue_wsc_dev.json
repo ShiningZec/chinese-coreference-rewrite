@@ -1,0 +1,1798 @@
+[
+  {
+    "text": "阿二是白净的面皮，五官很纤秀，说话轻轻，走路也轻轻。倘若他不是那么好的一种男孩子，家里人就不免要嫌他，邬桥人也要把他作笑料了，就像通常邬桥舞台上的孤独者一样。而现在的情形就有些不同，大家都有点宠他。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "阿二"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "阿二"
+      }
+    ],
+    "rewrite": "阿二是白净的面皮，五官很纤秀，说话轻轻，走路也轻轻。倘若阿二不是那么好的一种男孩子，家里人就不免要嫌他，邬桥人也要把他作笑料了，就像通常邬桥舞台上的孤独者一样。而现在的情形就有些不同，大家都有点宠阿二。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "家里人"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "邬桥人"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "孤独者"
+      }
+    ]
+  },
+  {
+    "text": "王琦瑶还发现，毛毛娘舅有意地让萨沙吃牌，还有意地出冲，有和也不和的。王琦瑶知道他是要多出钱，又怕别人不接受，就用这个输的方式。想到这些，一边鄙夷萨沙，一边赞赏毛毛娘舅。有一回，她晓得毛毛娘舅早在听和，也推断出他听的是哪一张牌，正巧手里有一张，便往桌上'啪'地一放，还看他一眼。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "毛毛娘舅"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "毛毛娘舅"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "毛毛娘舅"
+      },
+      {
+        "pronoun": "她",
+        "antecedent": "王琦瑶"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "毛毛娘舅"
+      }
+    ],
+    "rewrite": "王琦瑶还发现，毛毛娘舅有意地让萨沙吃牌，还有意地出冲，有和也不和的。王琦瑶知道毛毛娘舅是要多出钱，又怕别人不接受，就用这个输的方式。想到这些，一边鄙夷萨沙，一边赞赏毛毛娘舅。有一回，王琦瑶晓得毛毛娘舅早在听和，也推断出毛毛娘舅毛娘舅听的是哪一张牌，正巧手里有一张，便往桌上'啪'地一放，还看毛毛娘舅一眼。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "萨沙"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "萨沙"
+      },
+      {
+        "pronoun": "她",
+        "antecedent": "萨沙"
+      }
+    ]
+  },
+  {
+    "text": "可蒋丽莉不要听，一甩手走了。王琦瑶是伤了她的心，她也正期望王琦瑶早日有归宿，好把程先生让给她，但这消息依然叫她难过，心里还存了一丝不信。",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "蒋丽莉"
+      }
+    ],
+    "rewrite": "可蒋丽莉不要听，一甩手走了。王琦瑶是伤了蒋丽莉的心，她也正期望王琦瑶早日有归宿，好把程先生让给她，但这消息依然叫她难过，心里还存了一丝不信。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "她",
+        "antecedent": "王琦瑶"
+      },
+      {
+        "pronoun": "她",
+        "antecedent": "王琦瑶"
+      }
+    ]
+  },
+  {
+    "text": "一九六五年的城市上空，充斥着温饱的和暖气流，它决非奢华，而是一股朴素敦厚的享乐之风。",
+    "coreference": [
+      {
+        "pronoun": "它",
+        "antecedent": "气流"
+      }
+    ],
+    "rewrite": "一九六五年的城市上空，充斥着温饱的和暖气流，气流决非奢华，而是一股朴素敦厚的享乐之风。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "它",
+        "antecedent": "城市"
+      }
+    ]
+  },
+  {
+    "text": "尤其是诸如平安里这样的老弄堂，你惊异它怎么不倒？瓦碎了有三分之一，有些地方加铺了牛毛毡，木头门窗发黑朽烂，满目灰拓拓的颜色。可它却是形散神不散，有一股压抑着的心声。",
+    "coreference": [
+      {
+        "pronoun": "它",
+        "antecedent": "老弄堂"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "老弄堂"
+      }
+    ],
+    "rewrite": "尤其是诸如平安里这样的老弄堂，你惊异老弄堂怎么不倒？瓦碎了有三分之一，有些地方加铺了牛毛毡，木头门窗发黑朽烂，满目灰拓拓的颜色。可老弄堂却是形散神不散，有一股压抑着的心声。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "它",
+        "antecedent": "瓦"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "牛毛毡"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "木头门窗"
+      }
+    ]
+  },
+  {
+    "text": "薇薇要比她高大，因此这件旗袍在她身上，紧绷绷的，也略短了。到底年代久了，缎面有些发黄变色，一看便是件旧物。薇薇穿了它，怎么看都不大像的",
+    "coreference": [
+      {
+        "pronoun": "它",
+        "antecedent": "旗袍"
+      }
+    ],
+    "rewrite": "薇薇要比她高大，因此这件旗袍在她身上，紧绷绷的，也略短了。到底年代久了，缎面有些发黄变色，一看便是件旧物。薇薇穿了旗袍，怎么看都不大像的",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "它",
+        "antecedent": "缎面"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "旧物"
+      }
+    ]
+  },
+  {
+    "text": "忽听窗下弄堂里嘈杂声起，便推窗望去，原来是谁家在鸡窝里抓住一只黄鼠狼。那人倒提着黄鼠狼控诉它的罪孽，围了许多人看，然后，人们簇拥着他向弄口走去。",
+    "coreference": [
+      {
+        "pronoun": "它",
+        "antecedent": "黄鼠狼"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "黄鼠狼"
+      }
+    ],
+    "rewrite": "忽听窗下弄堂里嘈杂声起，便推窗望去，原来是谁家在鸡窝里抓住一只黄鼠狼。那人倒提着黄鼠狼控诉黄鼠狼鼠狼的罪孽，围了许多人看，然后，人们簇拥着他向弄口走去。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "它",
+        "antecedent": "鸡窝"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "窗"
+      }
+    ]
+  },
+  {
+    "text": "毛豆对辖制他的大王的喽罗二王、三王不要命地反抗，反而使大王暗中喜欢起他来。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "毛豆"
+      }
+    ],
+    "rewrite": "毛豆对辖制他的大王的喽罗二王、三王不要命地反抗，反而使大王暗中喜欢起毛豆来。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "二王"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "三王"
+      }
+    ]
+  },
+  {
+    "text": "韩燕来，也叫毛豆，一个上海北郊的男孩，在家中是老小，又是父母中年时生的，人称“奶末头”，家中人都娇宝他。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "韩燕来"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "毛豆"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "上海北郊的男孩"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "“奶末头”"
+      }
+    ],
+    "rewrite": "韩燕来，也叫毛豆，一个上海北郊的男孩，在家中是老小，又是父母中年时生的，人称“奶末头”，家中人都娇宝“奶末头”海北郊的男孩豆燕来。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": []
+  },
+  {
+    "text": "事实上呢？不是“阿哥”不肯开瓶，是“阿哥”实在开不动！燕来不完全懂他们的意思，但却知道了今年的圣诞节其实是清淡的，这多少有些扫他的兴。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "燕来"
+      }
+    ],
+    "rewrite": "事实上呢？不是“阿哥”不肯开瓶，是“阿哥”实在开不动！燕来不完全懂他们的意思，但却知道了今年的圣诞节其实是清淡的，这多少有些扫燕来的兴。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "“阿哥”"
+      }
+    ]
+  },
+  {
+    "text": "恰巧这个“朋友”也是个孝子，再则客人又将车资提到了五千，他叹息一声，就上路了。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "“朋友”"
+      }
+    ],
+    "rewrite": "恰巧这个“朋友”也是个孝子，再则客人又将车资提到了五千，“朋友”叹息一声，就上路了。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "客人"
+      }
+    ]
+  },
+  {
+    "text": "“朋友”毛骨悚然，幸亏前座的客人一会儿递他一支烟，一会儿递他一支烟，上好的烟，红塔山！",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "“朋友”"
+      }
+    ],
+    "rewrite": "“朋友”毛骨悚然，幸亏前座的客人一会儿递他一支烟，一会儿递“朋友”一支烟，上好的烟，红塔山！",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "客人"
+      }
+    ]
+  },
+  {
+    "text": "毛豆开着车，行驶在外环线高架，开过杨浦大桥，向北去。大王坐在他身边，身后是二王和三王。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "毛豆"
+      }
+    ],
+    "rewrite": "毛豆开着车，行驶在外环线高架，开过杨浦大桥，向北去。大王坐在毛豆身边，身后是二王和三王。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "大王"
+      }
+    ]
+  },
+  {
+    "text": "不过，在面子上，毛豆还下不来，一半是因为他确实很生气；另一半也是因为，他毛豆怎么能与他们做一路人。所以，他必须生气。有几次大王问他累不累，要不要喝水，后面的人立即送上矿泉水瓶子，他不理睬。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "毛豆"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "毛豆"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "毛豆"
+      }
+    ],
+    "rewrite": "不过，在面子上，毛豆还下不来，一半是因为毛豆确实很生气；另一半也是因为，毛豆毛豆怎么能与他们做一路人。所以，他必须生气。有几次大王问他累不累，要不要喝水，后面的人立即送上矿泉水瓶子，毛豆不理睬。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "大王"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "后面的人"
+      }
+    ]
+  },
+  {
+    "text": "毛豆看着他的车，眼光漠然，就像看着别人的车。这车和他有什么关系呢？他漠然地想到，车的另一个主人，他的搭档老程。老程一定在骂自己了，他会以为自己拉到长差，就霸住车不给他",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "毛豆"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "毛豆"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "老程"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "老程"
+      }
+    ],
+    "rewrite": "毛豆看着毛豆的车，眼光漠然，就像看着别人的车。这车和他有什么关系呢？毛豆漠然地想到，车的另一个主人，他的搭档老程。老程一定在骂自己了，老程会以为自己拉到长差，就霸住车不给老程",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "别人"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "毛豆"
+      }
+    ]
+  },
+  {
+    "text": "吃过饭，大王让老板开个房间，老板神情立时紧张起来，说：我们不做这生意的。二王和三王就吼他，骂他当他们是什么人？",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "老板"
+      }
+    ],
+    "rewrite": "吃过饭，大王让老板开个房间，老板神情立时紧张起来，说：我们不做这生意的。二王和三王就吼老板，骂他当他们是什么人？",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "大王"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "二王"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "三王"
+      }
+    ]
+  },
+  {
+    "text": "看完后，二王以同情的口气对毛豆说：你们上海的警察都不来找你。毛豆想回他一句，却没有回出来，只是朝了电视瞪着眼。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "二王"
+      }
+    ],
+    "rewrite": "看完后，二王以同情的口气对毛豆说：你们上海的警察都不来找你。毛豆想回二王一句，却没有回出来，只是朝了电视瞪着眼。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "上海的警察"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "毛豆"
+      }
+    ]
+  },
+  {
+    "text": "播音员是熟悉的，画面上的巷里坊间也是熟悉的，毛豆怔忡着，眼泪涌了上来，那两人趁了屏幕的亮瞥见了，不由都一愣：他哭了！",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "毛豆"
+      }
+    ],
+    "rewrite": "播音员是熟悉的，画面上的巷里坊间也是熟悉的，毛豆怔忡着，眼泪涌了上来，那两人趁了屏幕的亮瞥见了，不由都一愣：毛豆哭了！",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "播音员"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "两人"
+      }
+    ]
+  },
+  {
+    "text": "大王的眼睛一直看着毛豆：我向你保证，等我战友出差回来，车子交到他手上，立刻让你拿钱走人。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "我战友"
+      }
+    ],
+    "rewrite": "大王的眼睛一直看着毛豆：我向你保证，等我战友出差回来，车子交到我战友手上，立刻让你拿钱走人。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "大王"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "毛豆"
+      }
+    ]
+  },
+  {
+    "text": "毛豆很快注意到大王的这个习惯，他从不遗留烟头在任何地方。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "大王"
+      }
+    ],
+    "rewrite": "毛豆很快注意到大王的这个习惯，大王从不遗留烟头在任何地方。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "毛豆"
+      }
+    ]
+  },
+  {
+    "text": "毛豆忽想起一个人，老大，他也使用过这一句话，可是意思完全不一样",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "老大"
+      }
+    ],
+    "rewrite": "毛豆忽想起一个人，老大，老大也使用过这一句话，可是意思完全不一样",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "毛豆"
+      }
+    ]
+  },
+  {
+    "text": "大王问：老师以为如何选择好呢？此时，老师的眼睛又回来了，他慈爱地看着面前这个谦虚好学的青年：是啊！书是那么多，而人生是有限的，选择就尤为重要，意味着你可能将有限的人生利用到怎样大的程度",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "老师"
+      }
+    ],
+    "rewrite": "大王问：老师以为如何选择好呢？此时，老师的眼睛又回来了，老师慈爱地看着面前这个谦虚好学的青年：是啊！书是那么多，而人生是有限的，选择就尤为重要，意味着你可能将有限的人生利用到怎样大的程度",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "大王"
+      }
+    ]
+  },
+  {
+    "text": "老师觉得青年简直是胡搅蛮缠，他不再发言，从辩论中退出，只是作一名听众。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "老师"
+      }
+    ],
+    "rewrite": "老师觉得青年简直是胡搅蛮缠，老师不再发言，从辩论中退出，只是作一名听众。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "青年"
+      }
+    ]
+  },
+  {
+    "text": "谁也不会记起曾经有一个缄默的汉子，不怎么与人搭拢，却也有些人缘。肯吃亏，轿夫间起了争执，他会用一二句话调停。像个读过书的人，可从不见他拿书。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "缄默的汉子"
+      }
+    ],
+    "rewrite": "谁也不会记起曾经有一个缄默的汉子，不怎么与人搭拢，却也有些人缘。肯吃亏，轿夫间起了争执，缄默的汉子会用一二句话调停。像个读过书的人，可从不见他拿书。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "轿夫"
+      }
+    ]
+  },
+  {
+    "text": "后院中的一个，就停了他们的车，是旅店老板给找的地方，大王与他说是车坏了，要找人修。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "大王"
+      }
+    ],
+    "rewrite": "后院中的一个，就停了他们的车，是旅店老板给找的地方，大王与大王说是车坏了，要找人修。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "旅店老板"
+      }
+    ]
+  },
+  {
+    "text": "俾斯麦曾说过，法国公使大使的特点，就是一句外国话不会讲；这几位警察并不懂德文，居然传情达意，引得犹太女人格格地笑，比他们的外交官强多了。",
+    "coreference": [
+      {
+        "pronoun": "他们",
+        "antecedent": "警察"
+      }
+    ],
+    "rewrite": "俾斯麦曾说过，法国公使大使的特点，就是一句外国话不会讲；这几位警察并不懂德文，居然传情达意，引得犹太女人格格地笑，比警察的外交官强多了。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他们",
+        "antecedent": "俾斯麦"
+      },
+      {
+        "pronoun": "他们",
+        "antecedent": "法国公使大使"
+      },
+      {
+        "pronoun": "他们",
+        "antecedent": "犹太女人"
+      }
+    ]
+  },
+  {
+    "text": "苏小姐听了，心里直刺痛，回答孙太太同时安慰自己道：“那绝不可能！鲍小姐有婚夫，她自己跟我讲过。她留学的钱还是她夫婚夫出的。”",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "鲍小姐"
+      }
+    ],
+    "rewrite": "苏小姐听了，心里直刺痛，回答孙太太同时安慰自己道：“那绝不可能！鲍小姐有婚夫，她自己跟我讲过。鲍小姐留学的钱还是她夫婚夫出的。”",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "她",
+        "antecedent": "苏小姐"
+      },
+      {
+        "pronoun": "她",
+        "antecedent": "孙太太"
+      }
+    ]
+  },
+  {
+    "text": "苏小姐，我告诉你句笑话，方先生跟你在中国是老同学，他是不是一向说话随便的？昨天孙先生跟他讲赌钱手运不好，他还笑呢。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "方先生"
+      }
+    ],
+    "rewrite": "苏小姐，我告诉你句笑话，方先生跟你在中国是老同学，他是不是一向说话随便的？昨天孙先生跟方先生讲赌钱手运不好，他还笑呢。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "苏小姐"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "孙先生"
+      }
+    ]
+  },
+  {
+    "text": "现在看来，鲍小姐那位未婚夫一定会中航空奖券头奖；假如她做了方太太，方先生赌钱的手气非好不可。",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "鲍小姐"
+      }
+    ],
+    "rewrite": "现在看来，鲍小姐那位未婚夫一定会中航空奖券头奖；假如鲍小姐做了方太太，方先生赌钱的手气非好不可。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "她",
+        "antecedent": "未婚夫"
+      }
+    ]
+  },
+  {
+    "text": "方老先生因为拒绝了本县汉奸的引诱，有家难归，而政府并没给他什么名义，觉得他爱国而国不爱他，大有青年守节的孀妇不见宠于翁姑的怨抑。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "方老先生"
+      }
+    ],
+    "rewrite": "方老先生因为拒绝了本县汉奸的引诱，有家难归，而政府并没给他什么名义，觉得他爱国而国不爱方老先生，大有青年守节的孀妇不见宠于翁姑的怨抑。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "汉奸"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "政府"
+      }
+    ]
+  },
+  {
+    "text": "一天，周太太跟鸿渐说，有人替他做媒，就是有一次鸿渐跟周经理出去应酬，同席一位姓张的女儿。据周太太说，张家把他八字要去了，请算命人排过，跟他们小姐的命“天作之合，大吉大利”。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "鸿渐"
+      },
+      {
+        "pronoun": "他们",
+        "antecedent": "鸿渐"
+      },
+      {
+        "pronoun": "他们",
+        "antecedent": "张家"
+      }
+    ],
+    "rewrite": "一天，周太太跟鸿渐说，有人替他做媒，就是有一次鸿渐跟周经理出去应酬，同席一位姓张的女儿。据周太太说，张家把鸿渐八字要去了，请算命人排过，跟张家小姐的命“天作之合，大吉大利”。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "周太太"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "周经理"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "姓张的女儿"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "张家"
+      },
+      {
+        "pronoun": "他们",
+        "antecedent": "周太太"
+      },
+      {
+        "pronoun": "他们",
+        "antecedent": "周太太跟鸿渐"
+      },
+      {
+        "pronoun": "他们",
+        "antecedent": "周经理"
+      },
+      {
+        "pronoun": "他们",
+        "antecedent": "鸿渐跟周经理"
+      },
+      {
+        "pronoun": "他们",
+        "antecedent": "姓张的女儿"
+      },
+      {
+        "pronoun": "他们",
+        "antecedent": "算命人"
+      }
+    ]
+  },
+  {
+    "text": "张先生呵呵大笑，一面分付进来的女佣说：“快去跟太太小姐说，客人来了，请她们出来。makeitsnappy！”",
+    "coreference": [
+      {
+        "pronoun": "她们",
+        "antecedent": "太太小姐"
+      }
+    ],
+    "rewrite": "张先生呵呵大笑，一面分付进来的女佣说：“快去跟太太小姐说，客人来了，请太太小姐出来。makeitsnappy！”",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "她们",
+        "antecedent": "张先生"
+      },
+      {
+        "pronoun": "她们",
+        "antecedent": "女佣"
+      },
+      {
+        "pronoun": "她们",
+        "antecedent": "客人"
+      }
+    ]
+  },
+  {
+    "text": "张太太如梦初醒道：“咱们真糊涂了！还没跟方先生清账呢。陈先生，丁先生，让我一个人来付他，咱们回头再算得了。”",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "方先生"
+      }
+    ],
+    "rewrite": "张太太如梦初醒道：“咱们真糊涂了！还没跟方先生清账呢。陈先生，丁先生，让我一个人来付方先生，咱们回头再算得了。”",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "张太太"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "陈先生"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "丁先生"
+      }
+    ]
+  },
+  {
+    "text": "“她序上明明引着JulesTellier的比喻，说有个生脱发病的人去理发，那剃头的对他说不用剪发，等不了几天，头毛压儿全掉光了；大部分现代文学也同样的不值批评。这比喻还算俏皮。”",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "生脱发病的人"
+      }
+    ],
+    "rewrite": "“她序上明明引着JulesTellier的比喻，说有个生脱发病的人去理发，那剃头的对生脱发病的人说不用剪发，等不了几天，头毛压儿全掉光了；大部分现代文学也同样的不值批评。这比喻还算俏皮。”",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "JulesTellier"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "剃头的"
+      }
+    ]
+  },
+  {
+    "text": "王尔恺跟表伯有往来，还是赵辛楣的上司，家里有太太。可是去年表姐回国，他就讨好个不休不歇，气得赵辛楣人都瘦了。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "王尔恺"
+      }
+    ],
+    "rewrite": "王尔恺跟表伯有往来，还是赵辛楣的上司，家里有太太。可是去年表姐回国，王尔恺就讨好个不休不歇，气得赵辛楣人都瘦了。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "表伯"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "赵辛楣"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "太太"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "表姐"
+      }
+    ]
+  },
+  {
+    "text": "这孩子前天在本国史班上，把清朝国姓“爱新觉罗”错记作“亲爱保罗”，给教师痛骂一顿，气得今天赖学在家，偏是苏小姐的名字他倒过目不忘。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "这孩子"
+      }
+    ],
+    "rewrite": "这孩子前天在本国史班上，把清朝国姓“爱新觉罗”错记作“亲爱保罗”，给教师痛骂一顿，气得今天赖学在家，偏是苏小姐的名字这孩子倒过目不忘。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "教师"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "苏小姐"
+      }
+    ]
+  },
+  {
+    "text": "天知道褚慎明并没吹牛，罗素确问过他什么时候到英国，有什么计划，茶里要搁几块糖这一类非他自己不能解决的问题。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "褚慎明"
+      }
+    ],
+    "rewrite": "天知道褚慎明并没吹牛，罗素确问过他什么时候到英国，有什么计划，茶里要搁几块糖这一类非褚慎明自己不能解决的问题。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "罗素"
+      }
+    ]
+  },
+  {
+    "text": "赵辛楣：“沈太太，你这话对。现在的女人真能干！文纨，就像徐宝琼徐小姐，沈太太认识她罢？她帮她父亲经营那牛奶场，大大小小的事，全是她一手办理，外表斯文柔弱，全看不出来！”",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "徐宝琼"
+      }
+    ],
+    "rewrite": "赵辛楣：“沈太太，你这话对。现在的女人真能干！文纨，就像徐宝琼徐小姐，沈太太认识徐宝琼罢？她帮她父亲经营那牛奶场，大大小小的事，全是她一手办理，外表斯文柔弱，全看不出来！”",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "她",
+        "antecedent": "赵辛楣"
+      },
+      {
+        "pronoun": "她",
+        "antecedent": "沈太太"
+      },
+      {
+        "pronoun": "她",
+        "antecedent": "文纨"
+      }
+    ]
+  },
+  {
+    "text": "说着，苏小姐来了。辛楣利用主人职权，当鸿渐的面向她专利地献殷勤。",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "苏小姐"
+      }
+    ],
+    "rewrite": "说着，苏小姐来了。辛楣利用主人职权，当鸿渐的面向苏小姐专利地献殷勤。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "她",
+        "antecedent": "辛楣"
+      },
+      {
+        "pronoun": "她",
+        "antecedent": "鸿渐"
+      }
+    ]
+  },
+  {
+    "text": "老夫妇的好奇心无法满足，又不便细问蒙头躺着的鸿渐，只把门房考审个不了，还嫌他没有观察力，骂他有了眼睛不会用，为什么不把苏小姐看个仔细。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "门房"
+      }
+    ],
+    "rewrite": "老夫妇的好奇心无法满足，又不便细问蒙头躺着的鸿渐，只把门房考审个不了，还嫌他没有观察力，骂门房有了眼睛不会用，为什么不把苏小姐看个仔细。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "老夫妇"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "鸿渐"
+      }
+    ]
+  },
+  {
+    "text": "唐家车夫走后，方鸿渐上楼洗脸，周太太半楼梯劈面碰见，便想把昨夜女用人告诉的话问他，好容易忍住了，这证明她不但负责任，并且有涵养。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "方鸿渐"
+      },
+      {
+        "pronoun": "她",
+        "antecedent": "周太太"
+      }
+    ],
+    "rewrite": "唐家车夫走后，方鸿渐上楼洗脸，周太太半楼梯劈面碰见，便想把昨夜女用人告诉的话问方鸿渐，好容易忍住了，这证明周太太不但负责任，并且有涵养。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "车夫"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "周太太"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "女用人"
+      },
+      {
+        "pronoun": "她",
+        "antecedent": "车夫"
+      },
+      {
+        "pronoun": "她",
+        "antecedent": "方鸿渐"
+      },
+      {
+        "pronoun": "她",
+        "antecedent": "女用人"
+      }
+    ]
+  },
+  {
+    "text": "阿丑停嘴，光着眼望了望鸿渐，看不像有糖会给他，又向方老太太跳嚷去了。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "阿丑"
+      }
+    ],
+    "rewrite": "阿丑停嘴，光着眼望了望鸿渐，看不像有糖会给阿丑，又向方老太太跳嚷去了。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "鸿渐"
+      }
+    ]
+  },
+  {
+    "text": "鸿渐辛楣是同舱，孙小姐也碰见了，只找不着李顾两人。船开了还不见他们踪迹，辛楣急得满头大汗，鸿渐孙小姐也帮着他慌。",
+    "coreference": [
+      {
+        "pronoun": "他们",
+        "antecedent": "李顾两人"
+      }
+    ],
+    "rewrite": "鸿渐辛楣是同舱，孙小姐也碰见了，只找不着李顾两人。船开了还不见李顾两人踪迹，辛楣急得满头大汗，鸿渐孙小姐也帮着他慌。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他们",
+        "antecedent": "鸿渐辛楣"
+      },
+      {
+        "pronoun": "他们",
+        "antecedent": "孙小姐"
+      }
+    ]
+  },
+  {
+    "text": "鸿渐道：“看见，多的是。有一次，我们坐的船险的嵌在鲸鱼的牙齿缝里。”灯光照着孙小姐惊奇的眼睛张得像吉沃吐（Giotto）画的“○”一样圆，辛楣的猜疑深了一层，说：“你听他胡说！”",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "鸿渐"
+      }
+    ],
+    "rewrite": "鸿渐道：“看见，多的是。有一次，我们坐的船险的嵌在鲸鱼的牙齿缝里。”灯光照着孙小姐惊奇的眼睛张得像吉沃吐（Giotto）画的“○”一样圆，辛楣的猜疑深了一层，说：“你听鸿渐胡说！”",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "船"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "鲸鱼"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "孙小姐"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "吉沃吐"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "辛楣"
+      }
+    ]
+  },
+  {
+    "text": "那伙计因为店里的竹榻全为添铺用完了，替顾先生把一扇板门搁在两张白木凳上，算是他的床。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "顾先生"
+      }
+    ],
+    "rewrite": "那伙计因为店里的竹榻全为添铺用完了，替顾先生把一扇板门搁在两张白木凳上，算是顾先生的床。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "伙计"
+      }
+    ]
+  },
+  {
+    "text": "李梅亭道：“辛楣就那么要面子！我这身衣服更糟，我尽它去。”",
+    "coreference": [
+      {
+        "pronoun": "它",
+        "antecedent": "衣服"
+      }
+    ],
+    "rewrite": "李梅亭道：“辛楣就那么要面子！我这身衣服更糟，我尽衣服去。”",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "它",
+        "antecedent": "李梅亭"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "辛楣"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "面子"
+      }
+    ]
+  },
+  {
+    "text": "鸿渐看见一个烤山薯的摊子，想这比花生米好多了，早餐就买它罢。忽然注意有人正作成这个摊子的生意，衣服体态活像李梅亭；他细一瞧，不是他是谁，买了山薯脸对着墙壁在吃呢。",
+    "coreference": [
+      {
+        "pronoun": "它",
+        "antecedent": "山薯"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "李梅亭"
+      }
+    ],
+    "rewrite": "鸿渐看见一个烤山薯的摊子，想这比花生米好多了，早餐就买山薯罢。忽然注意有人正作成这个摊子的生意，衣服体态活像李梅亭；他细一瞧，不是李梅亭是谁，买了山薯脸对着墙壁在吃呢。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "它",
+        "antecedent": "摊子"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "花生米"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "早餐"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "鸿渐"
+      }
+    ]
+  },
+  {
+    "text": "梅亭欢喜得直说：“讨厌，讨厌！我累得很，今天还想早点睡呢！这些孩子热心得不懂道理，赵先生，他们消息真灵呀！”",
+    "coreference": [
+      {
+        "pronoun": "他们",
+        "antecedent": "孩子"
+      }
+    ],
+    "rewrite": "梅亭欢喜得直说：“讨厌，讨厌！我累得很，今天还想早点睡呢！这些孩子热心得不懂道理，赵先生，孩子消息真灵呀！”",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他们",
+        "antecedent": "梅亭"
+      },
+      {
+        "pronoun": "他们",
+        "antecedent": "赵先生"
+      }
+    ]
+  },
+  {
+    "text": "一千年后，这些书准像敦煌石室的卷子那样名贵，现在呢，它们古而不稀，短见浅识的藏书家还不知道收买。",
+    "coreference": [
+      {
+        "pronoun": "它们",
+        "antecedent": "这些书"
+      }
+    ],
+    "rewrite": "一千年后，这些书准像敦煌石室的卷子那样名贵，现在呢，这些书古而不稀，短见浅识的藏书家还不知道收买。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "它们",
+        "antecedent": "敦煌石室"
+      },
+      {
+        "pronoun": "它们",
+        "antecedent": "卷子"
+      }
+    ]
+  },
+  {
+    "text": "在西洋文艺复兴的时候，标准美人都要生得黑，我们读莎士比亚和法国七星派诗人的十四行诗，就知道使他们颠倒的都是些黑美人。",
+    "coreference": [
+      {
+        "pronoun": "他们",
+        "antecedent": "莎士比亚和法国七星派诗人"
+      }
+    ],
+    "rewrite": "在西洋文艺复兴的时候，标准美人都要生得黑，我们读莎士比亚和法国七星派诗人的十四行诗，就知道使莎士比亚和法国七星派诗人颠倒的都是些黑美人。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他们",
+        "antecedent": "文艺复兴"
+      },
+      {
+        "pronoun": "他们",
+        "antecedent": "美人"
+      },
+      {
+        "pronoun": "他们",
+        "antecedent": "十四行诗"
+      }
+    ]
+  },
+  {
+    "text": "一个大名鼎鼎的老头子，当场一言不发，回家翻了半夜的书，明天清早赶来看李太太，讲诗人的坏话道：“他懂什么？我当时不好意思跟他抬扛，所以忍住没有讲。”",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "诗人"
+      }
+    ],
+    "rewrite": "一个大名鼎鼎的老头子，当场一言不发，回家翻了半夜的书，明天清早赶来看李太太，讲诗人的坏话道：“诗人懂什么？我当时不好意思跟他抬扛，所以忍住没有讲。”",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "老头子"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "书"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "李太太"
+      }
+    ]
+  },
+  {
+    "text": "那些南方人对于他们侨居北平的得意，仿佛犹太人爱他们入籍归化的国家，不住地挂在口头上。",
+    "coreference": [
+      {
+        "pronoun": "他们",
+        "antecedent": "犹太人"
+      }
+    ],
+    "rewrite": "那些南方人对于他们侨居北平的得意，仿佛犹太人爱犹太人入籍归化的国家，不住地挂在口头上。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他们",
+        "antecedent": "南方人"
+      }
+    ]
+  },
+  {
+    "text": "旁人虽然背后嘲笑建侯，说他“夫以妻贵”，沾了太太的光，算个小名人，李太太从没这样想过。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "建侯"
+      }
+    ],
+    "rewrite": "旁人虽然背后嘲笑建侯，说建侯“夫以妻贵”，沾了太太的光，算个小名人，李太太从没这样想过。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "旁人"
+      }
+    ]
+  },
+  {
+    "text": "建侯极中意这个少年，略问几句，吩咐他明天来开始干活，先试用一个月。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "少年"
+      }
+    ],
+    "rewrite": "建侯极中意这个少年，略问几句，吩咐少年明天来开始干活，先试用一个月。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "建侯"
+      }
+    ]
+  },
+  {
+    "text": "颐谷走后，建侯一团高兴，进去向爱默讲挑了一个中意的书记。爱默笑他像小孩子新得了玩具，还说：“我有淘气，谁希罕你的书记！”",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "建侯"
+      }
+    ],
+    "rewrite": "颐谷走后，建侯一团高兴，进去向爱默讲挑了一个中意的书记。爱默笑建侯像小孩子新得了玩具，还说：“我有淘气，谁希罕你的书记！”",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "颐谷"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "爱默"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "书记"
+      }
+    ]
+  },
+  {
+    "text": "两星期后，建侯到医院算账并迎接夫人，身体却未消瘦，只是脸黄皮宽，无精打采，而李太太花五百元日金新买来的眼睛，好象美术照相的电光，把她原有的美貌都焕映烘托出来。",
+    "coreference": [
+      {
+        "pronoun": "她",
+        "antecedent": "夫人"
+      },
+      {
+        "pronoun": "她",
+        "antecedent": "李太太"
+      }
+    ],
+    "rewrite": "两星期后，建侯到医院算账并迎接夫人，身体却未消瘦，只是脸黄皮宽，无精打采，而李太太花五百元日金新买来的眼睛，好象美术照相的电光，把夫人太太原有的美貌都焕映烘托出来。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "她",
+        "antecedent": "建侯"
+      }
+    ]
+  },
+  {
+    "text": "经过这两天半的工作，颐谷对建侯的敬畏心理消失干净。青年人的偏激使他对他的主人不留情地鄙视",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "颐谷"
+      }
+    ],
+    "rewrite": "经过这两天半的工作，颐谷对建侯的敬畏心理消失干净。青年人的偏激使颐谷对他的主人不留情地鄙视",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "建侯"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "青年人"
+      }
+    ]
+  },
+  {
+    "text": "老白又引客人进来，爱默起身招待，心还逗留在这长得聪明的孩子身上，想他该是受情感教育的年纪了。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "孩子"
+      }
+    ],
+    "rewrite": "老白又引客人进来，爱默起身招待，心还逗留在这长得聪明的孩子身上，想孩子该是受情感教育的年纪了。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "老白"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "客人"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "爱默"
+      }
+    ]
+  },
+  {
+    "text": "李氏夫妇了解颐谷怕生，来了客人，只浮泛地指着介绍，远远打个招呼，让他坐在不惹人注目的靠壁沙发里。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "颐谷"
+      }
+    ],
+    "rewrite": "李氏夫妇了解颐谷怕生，来了客人，只浮泛地指着介绍，远远打个招呼，让颐谷坐在不惹人注目的靠壁沙发里。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "李氏夫妇"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "客人"
+      }
+    ]
+  },
+  {
+    "text": "他伯父还有许多女弟子，大半是富商财主的外室；这些财翁白天忙着赚钱，怕小公馆里的情妇长日无聊，要不安分，常常叫她们学点玩艺儿消遣。",
+    "coreference": [
+      {
+        "pronoun": "她们",
+        "antecedent": "女弟子"
+      },
+      {
+        "pronoun": "她们",
+        "antecedent": "外室"
+      },
+      {
+        "pronoun": "她们",
+        "antecedent": "情妇"
+      }
+    ],
+    "rewrite": "他伯父还有许多女弟子，大半是富商财主的外室；这些财翁白天忙着赚钱，怕小公馆里的情妇长日无聊，要不安分，常常叫外室子学点玩艺儿消遣。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "她们",
+        "antecedent": "他伯父"
+      },
+      {
+        "pronoun": "她们",
+        "antecedent": "富商财主"
+      },
+      {
+        "pronoun": "她们",
+        "antecedent": "财翁"
+      }
+    ]
+  },
+  {
+    "text": "猫送到城南长街李家那天，李太太正在请朋友们茶会，来客都想给它起个好听的名字。",
+    "coreference": [
+      {
+        "pronoun": "它",
+        "antecedent": "猫"
+      }
+    ],
+    "rewrite": "猫送到城南长街李家那天，李太太正在请朋友们茶会，来客都想给猫起个好听的名字。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "它",
+        "antecedent": "李家"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "李太太"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "朋友们"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "来客"
+      }
+    ]
+  },
+  {
+    "text": "首都南迁以后，北平失掉它一向政治上的作用；同时，象一切无用过时的东西，它变为有历史价值的陈设品。",
+    "coreference": [
+      {
+        "pronoun": "它",
+        "antecedent": "北平"
+      }
+    ],
+    "rewrite": "首都南迁以后，北平失掉它一向政治上的作用；同时，象一切无用过时的东西，北平变为有历史价值的陈设品。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "它",
+        "antecedent": "首都"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "东西"
+      }
+    ]
+  },
+  {
+    "text": "他在英国住过几年，对人生一发傲睨，议论愈高不可攀；甚至你感到他的卓见高论不应当平摊桌上、低头阅读，该设法粘它在屋顶天花板上，象在罗马雪斯丁教堂里赏鉴米盖郎琪罗的名画一样，抬头仰面不怕脖子酸痛地瞻望。",
+    "coreference": [
+      {
+        "pronoun": "它",
+        "antecedent": "议论"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "卓见高论"
+      }
+    ],
+    "rewrite": "他在英国住过几年，对人生一发傲睨，议论愈高不可攀；甚至你感到他的卓见高论不应当平摊桌上、低头阅读，该设法粘卓见高论论在屋顶天花板上，象在罗马雪斯丁教堂里赏鉴米盖郎琪罗的名画一样，抬头仰面不怕脖子酸痛地瞻望。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "它",
+        "antecedent": "英国"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "人生"
+      },
+      {
+        "pronoun": "它",
+        "antecedent": "桌"
+      }
+    ]
+  },
+  {
+    "text": "拜罢起身，彼此肩上的感觉便都不同了，嵇鹤龄是减轻而胡雪岩是加重，“大哥！”他说，“你尽管放心到新城去，专心一致办事，家里一点都不用记挂，一切都有我！”",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "嵇鹤龄"
+      }
+    ],
+    "rewrite": "拜罢起身，彼此肩上的感觉便都不同了，嵇鹤龄是减轻而胡雪岩是加重，“大哥！”嵇鹤龄说，“你尽管放心到新城去，专心一致办事，家里一点都不用记挂，一切都有我！”",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "胡雪岩"
+      }
+    ]
+  },
+  {
+    "text": "胡雪岩离船登岸，坐轿进城，等王有龄到家，他接着也到了他那里，脸上是掩抑不住的笑容，王有龄夫妇都觉得奇怪，问他什么事这么高兴。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "王有龄"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "王有龄"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "胡雪岩"
+      }
+    ],
+    "rewrite": "胡雪岩离船登岸，坐轿进城，等王有龄到家，王有龄接着也到了王有龄那里，脸上是掩抑不住的笑容，王有龄夫妇都觉得奇怪，问胡雪岩什么事这么高兴。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "胡雪岩"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "胡雪岩"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "王有龄"
+      }
+    ]
+  },
+  {
+    "text": "但胡雪岩了解他的内心，便不肯这么回答，只说：“你不必过虑！鹤龄跟我说过，无论如何，自保之策，总是有的，可见得他极有把握。而且，人逢喜事精神爽，他此去没有后顾之虑，专心一致对付公事，当然无往不利。”",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "鹤龄"
+      }
+    ],
+    "rewrite": "但胡雪岩了解他的内心，便不肯这么回答，只说：“你不必过虑！鹤龄跟我说过，无论如何，自保之策，总是有的，可见得鹤龄极有把握。而且，人逢喜事精神爽，他此去没有后顾之虑，专心一致对付公事，当然无往不利。”",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "胡雪岩"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "胡雪岩"
+      }
+    ]
+  },
+  {
+    "text": "这一说，王有龄越发高兴，“不错，不错！我也觉得，这无论如何不是倒霉的时候。”他又说：“等鹤龄功成回省，我一定力保他接归安县。这个缺，一年起码有五万银子进帐。”",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "王有龄"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "鹤龄"
+      }
+    ],
+    "rewrite": "这一说，王有龄越发高兴，“不错，不错！我也觉得，这无论如何不是倒霉的时候。”王有龄又说：“等鹤龄功成回省，我一定力保鹤龄接归安县。这个缺，一年起码有五万银子进帐。”",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "王有龄"
+      }
+    ]
+  },
+  {
+    "text": "等开出门来，只见院子里与刘四站在一起的那个人，约有五十上下年纪，穿着簇新灰布面的老羊皮的袍子，头上戴着小帽，脚下却穿一双“抓地虎”的快靴，一下子倒认不准他的身分",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "那个人"
+      }
+    ],
+    "rewrite": "等开出门来，只见院子里与刘四站在一起的那个人，约有五十上下年纪，穿着簇新灰布面的老羊皮的袍子，头上戴着小帽，脚下却穿一双“抓地虎”的快靴，一下子倒认不准那个人的身分",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "刘四"
+      }
+    ]
+  },
+  {
+    "text": "进屋坐定，彼此重新请教姓名，姓杨的叫杨承福。王有龄管他叫“杨二哥”，他十分高兴，接着便把带来的一个包裹解开。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "杨承福"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "杨承福"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "“杨二哥”"
+      }
+    ],
+    "rewrite": "进屋坐定，彼此重新请教姓名，姓杨的叫杨承福。王有龄管杨承福叫“杨二哥”，“杨二哥”承福十分高兴，接着便把带来的一个包裹解开。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "王有龄"
+      }
+    ]
+  },
+  {
+    "text": "杨承福兴高采烈地说：“我家大人是二甲四十九名，点了翰林。第五十名就是大军机彭大人，他不曾点翰林，不过官运是他顶好，现在红得很，军机处里一把抓。”",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "彭大人"
+      }
+    ],
+    "rewrite": "杨承福兴高采烈地说：“我家大人是二甲四十九名，点了翰林。第五十名就是大军机彭大人，彭大人不曾点翰林，不过官运是他顶好，现在红得很，军机处里一把抓。”",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "杨承福"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "我家大人"
+      }
+    ]
+  },
+  {
+    "text": "贫土落第，境况凄凉，幸好原任福建巡抚颜检已调升直隶总督，他本来就看重王燮，便把他招入幕府，这原是极好的一个机会，一面有束修收入可以养家，一面就近再等下一科的会试，免了一番长途跨涉，不必再为筹措旅费，仰屋兴嗟。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "王燮"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "颜检"
+      }
+    ],
+    "rewrite": "贫土落第，境况凄凉，幸好原任福建巡抚颜检已调升直隶总督，颜检本来就看重王燮，便把王燮招入幕府，这原是极好的一个机会，一面有束修收入可以养家，一面就近再等下一科的会试，免了一番长途跨涉，不必再为筹措旅费，仰屋兴嗟。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "颜检"
+      }
+    ]
+  },
+  {
+    "text": "王有龄不曾说出这句话来，何桂清心里却明白：他已听杨承福略略提过，知道他此行是为了上京加捐，是境况似乎并不怎么好，随即问道：“这几年一直在浙江？”",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "王有龄"
+      }
+    ],
+    "rewrite": "王有龄不曾说出这句话来，何桂清心里却明白：他已听杨承福略略提过，知道王有龄此行是为了上京加捐，是境况似乎并不怎么好，随即问道：“这几年一直在浙江？”",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "何桂清"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "杨承福"
+      }
+    ]
+  },
+  {
+    "text": "你想呢？椿寿的家属当然要闹。不过，黄寿臣在这些上的本事最大，不必替他担心。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "黄寿臣"
+      }
+    ],
+    "rewrite": "你想呢？椿寿的家属当然要闹。不过，黄寿臣在这些上的本事最大，不必替黄寿臣担心。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "椿寿"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "家属"
+      }
+    ]
+  },
+  {
+    "text": "等看过封好，王有龄便跟何桂清要人。以他的意思，很想请杨承福做个帮手，这一点何桂清无法满足他的希望，因为杨承福是他最得力的人，许多公事、关系只有他清楚首尾，非他人所能替代。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "王有龄"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "王有龄"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "杨承福"
+      }
+    ],
+    "rewrite": "等看过封好，王有龄便跟何桂清要人。以王有龄的意思，很想请杨承福做个帮手，这一点何桂清无法满足王有龄的希望，因为杨承福是他最得力的人，许多公事、关系只有杨承福清楚首尾，非他人所能替代。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "何桂清"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "何桂清"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "何桂清"
+      }
+    ]
+  },
+  {
+    "text": "王有龄不好此道，早早回到了西河沿客店。高升是他事先放了他假的，不在客店。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "王有龄"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "高升"
+      }
+    ],
+    "rewrite": "王有龄不好此道，早早回到了西河沿客店。高升是王有龄事先放了高升假的，不在客店。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "高升"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "王有龄"
+      }
+    ]
+  },
+  {
+    "text": "高升报告主人，“胡少爷非叫我收不可，他说他亦是慷他人之慨。”",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "胡少爷"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "胡少爷"
+      }
+    ],
+    "rewrite": "高升报告主人，“胡少爷非叫我收不可，胡少爷说胡少爷亦是慷他人之慨。”",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "主人"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "高升"
+      },
+      {
+        "pronoun": "他",
+        "antecedent": "高升"
+      }
+    ]
+  },
+  {
+    "text": "胡雪岩心里有数，张胖子替人戴高帽子的本事极大，三言两语，就可以叫人晕晕糊糊，听他摆布，所以笑笑不答。",
+    "coreference": [
+      {
+        "pronoun": "他",
+        "antecedent": "张胖子"
+      }
+    ],
+    "rewrite": "胡雪岩心里有数，张胖子替人戴高帽子的本事极大，三言两语，就可以叫人晕晕糊糊，听张胖子摆布，所以笑笑不答。",
+    "source": "CLUEWSC2020",
+    "negative_candidates": [
+      {
+        "pronoun": "他",
+        "antecedent": "胡雪岩"
+      }
+    ]
+  }
+]
